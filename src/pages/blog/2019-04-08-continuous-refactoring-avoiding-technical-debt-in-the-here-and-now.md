@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: 'Continuous refactoring: avoiding technical debt in the here and now'
-date: 2019-01-28T13:26:22.510Z
+date: 2019-02-01T13:26:22.510Z
 description: >-
   How do you find time to refactor your code? The answer is simple: continuous
   refactoring. Learn how to reduce your future development technical debt
