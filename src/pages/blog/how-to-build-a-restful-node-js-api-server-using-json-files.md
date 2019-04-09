@@ -18,11 +18,11 @@ Although there are a lot of articles out there detailing how to **create a Node 
 
 For crying out loud, shouldn't it be easy to just make a Node API server that saves data to JSON files?!
 
-After what felt like a decade of rummaging through complex documentation and hundreds of StackOverflow answers, I found a brilliant [article by Nic Raboy](\"https://www.thepolyglotdeveloper.com/2015/10/create-a-simple-restful-api-with-node-js/\") from as long ago as 2015! I think the article misses out a few of the necessary 'real world' end points such as POST that actually interact with a real datastore - in this case, JSON files.
+After what felt like a decade of rummaging through complex documentation and hundreds of StackOverflow answers, I found a brilliant [article by Nic Raboy](https://www.thepolyglotdeveloper.com/2015/10/create-a-simple-restful-api-with-node-js/) from as long ago as 2015! I think the article misses out a few of the necessary 'real world' end points such as POST that actually interact with a real datastore - in this case, JSON files.
 
 But enough preamble, let's do this thing! Strap in, it's gonna be a long one!!
 
-![](\"/content/images/2019/03/nodejs-new-pantone-black.png\")
+![](/content/images/2019/03/nodejs-new-pantone-black.png)
 
 Node JS logo
 
@@ -42,11 +42,11 @@ Drop into the folder and run NPM's `init` script to set up the project with some
 Now, we need to install a few things to get going, namely:
 
 *   **Express** \> `npm install express`  
-    _[Express](\"https://expressjs.com/\") is a web application framework that provides lots of awesome features and HTTP utility methods_
+    _[Express](https://expressjs.com/) is a web application framework that provides lots of awesome features and HTTP utility methods_
 *   **Body Parser** > `npm install body-parser`  
-    _[body-parser](\"https://www.npmjs.com/package/body-parser\") is a body parsing middleware that helps to process the body of requests sent to the express server_
+    _[body-parser](https://www.npmjs.com/package/body-parser) is a body parsing middleware that helps to process the body of requests sent to the express server_
 *   **Nodemon** (optional) > `npm install nodemon --save-dev`  
-    completely optional, but [Nodemon](\"https://nodemon.io/\") is super helpful because it acts as a file-watcher, reloading our server when we make changes to our files – handy!
+    completely optional, but [Nodemon](https://nodemon.io/) is super helpful because it acts as a file-watcher, reloading our server when we make changes to our files – handy!
 
 Add a couple of folders and files so that your project structure looks something like this:
 
@@ -54,7 +54,7 @@ Add a couple of folders and files so that your project structure looks something
 
 Open up your `package.json` file and check that the `main` entry is set to our `server.js` file (our main entry point) as well as adding a 'start' script that will launch our Nodemon reloading magic.
 
-    \"main\": \"server.js\",\n\"scripts\": {\n  \"start\": \"nodemon server.js\",\n}
+    main: server.js,\nscripts: {\n  start: nodemon server.js,\n}
 
 ### Install our packages
 
@@ -64,9 +64,9 @@ Setup's almost done, the last thing is to make sure that we've installed the pac
 
 Bosh - setup's all done and we're ready to start building the server.
 
-![\"blue](\"https://images.unsplash.com/photo-1543076563-8a29893e162d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ\")
+![blue](https://images.unsplash.com/photo-1543076563-8a29893e162d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-Photo by [Nicole Baster](\"https://unsplash.com/@nicolebaster?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit\") / [Unsplash](\"https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit\")
+Photo by [Nicole Baster](https://unsplash.com/@nicolebaster?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit) / [Unsplash](https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit)
 
 2\. Building the server.js file
 -------------------------------
@@ -111,7 +111,7 @@ Save the file and let's give this puppy a whirl. Enter this command in your term
 
 You should see a glorious 'listening on port 3001' message. Splendid :)
 
-![](\"/content/images/2019/03/api-started.png\")
+![](/content/images/2019/03/api-started.png)
 
 Our beautiful API server start message
 
@@ -137,7 +137,7 @@ Hurrah, our very first route is almost ready. Whilst not much to look at, notice
 
 A couple of other points to mention here:
 
-1.  We're using the ES6 formatting within our JavaScript files, including arrow function ([I have another article about arrow functions](\"/arrow-functions-in-javascript/\") right here).
+1.  We're using the ES6 formatting within our JavaScript files, including arrow function ([I have another article about arrow functions](/arrow-functions-in-javascript/) right here).
 2.  Within the body of the GET handler, we're calling the Node `fs` library we passed in to call the `readFile()` method. This helps us to access the underlying file system and load up a file
 
 ### Hook up our first route to the main route handler
@@ -159,17 +159,17 @@ Let's test our hard work out. Run the same command as before to start the server
 
 Once it's loading, you can visit `http://localhost:3001/users` in a browser, where you should be greeted by a list of users as defined in the JSON file.
 
-![](\"/content/images/2019/03/api-server-userlist-resultes.png\")
+![](/content/images/2019/03/api-server-userlist-resultes.png)
 
 JSON results from our GET request at /users
 
 I checked this in FireFox, but it's worth downloading a dedicated API testing app for jobs like this. I'd recommend Postman (I use it myself locally and in development), but there are loads out there. It'll become more important later down the line when we need to pass data through with the request for POST or PUT requests.
 
-You can [download Postman from their website](\"https://www.getpostman.com/downloads/\") for just about any environment and it's **free** for individual use.
+You can [download Postman from their website](https://www.getpostman.com/downloads/) for just about any environment and it's **free** for individual use.
 
 Here's what our GET request looks like using Postman:
 
-![](\"/content/images/2019/03/postman-get-users.png\")
+![](/content/images/2019/03/postman-get-users.png)
 
 /users GET request when using Postman desktop app
 
@@ -178,9 +178,9 @@ Here's what our GET request looks like using Postman:
 
 GET-ting results and listing them is fine, but in the real-world we usually need to complete the rest of the RESTful CRUD cycle, namely creating (POST), updating (PUT), and deleting (DELETE).
 
-Before we get to the more complex examples, you can skip ahead and [download the complete Node API server from the GitHub](\"https://github.com/bpk68/api-server-starter\") repository if you'd prefer.
+Before we get to the more complex examples, you can skip ahead and [download the complete Node API server from the GitHub](https://github.com/bpk68/api-server-starter) repository if you'd prefer.
 
-[Checkout the complete Node API server with JSON file data on GitHub here](\"https://github.com/bpk68/api-server-starter\").
+[Checkout the complete Node API server with JSON file data on GitHub here](https://github.com/bpk68/api-server-starter).
 
 5\. Taking it further, completing the CRUD
 ------------------------------------------
@@ -189,7 +189,7 @@ Let's keep going while we're on a roll. In this section, we'll pad out our limit
 
 ### Refactoring what we've got
 
-As a huge fan of the [continuous refactoring technique](\"/continuous-refactoring-avoiding-technical-debt-in-the-here-and-now/\"), I'm always looking to improve code as I go. Looking at the file `users.js` now, we're going to start repeating a lot of code with the `fs.readFile()` and `fs.writeFile()` methods. Let's refactor them up to the top of the `users.js` file now:
+As a huge fan of the [continuous refactoring technique](/continuous-refactoring-avoiding-technical-debt-in-the-here-and-now/), I'm always looking to improve code as I go. Looking at the file `users.js` now, we're going to start repeating a lot of code with the `fs.readFile()` and `fs.writeFile()` methods. Let's refactor them up to the top of the `users.js` file now:
 
     \nconst userRoutes = (app, fs) => {\n\n    //...unchanged ^^^\n\n    \n    // refactored helper methods\n    const readFile = (callback, returnJson = false, filePath = dataPath, encoding = 'utf8') => {\n        fs.readFile(filePath, encoding, (err, data) => {\n            if (err) {\n                throw err;\n            }\n\n            callback(returnJson ? JSON.parse(data) : data);\n        });\n    };\n\n   const writeFile = (fileData, callback, filePath = dataPath, encoding = 'utf8') => {\n\n        fs.writeFile(filePath, fileData, encoding, (err) => {\n            if (err) {\n                throw err;\n            }\n\n            callback();\n        });\n    };\n\n    // READ\n    app.get('/users', (req, res) => {\n        fs.readFile(dataPath, 'utf8', (err, data) => {\n            if (err) {\n                throw err;\n            }\n\n            res.send(JSON.parse(data));\n        });\n    });\n};\n\nmodule.exports = userRoutes;\n
 
@@ -207,7 +207,7 @@ Our new, refactored read/write methods look very similar. Here's what they do:
 *   They set some default, common variables (such as setting the path of the file to the default data file – in this case, `users.json`)
 *   Internally, they catch and throw an error, or call the callback function once complete
 
-You can [read more about the various file system methods on the Node website](\"https://nodejs.org/api/fs.html\").
+You can [read more about the various file system methods on the Node website](https://nodejs.org/api/fs.html).
 
 ### Creating a new user
 
@@ -240,7 +240,7 @@ Here's our update function:
 The main differences here are the route we call and grabbing the parameters out of the request.
 
 *   The route has changed from `/users` to `/users/:id`. The `:id` portion is a variable parameter that we can append to our API URL. So, you could call `/users/4` which would match against this route if you used a PUT request – the accepted RESTful way of handling updates
-*   We grab this `:id` value to help us find the correct user to edit using `req.params[\"id\"]`
+*   We grab this `:id` value to help us find the correct user to edit using `req.params[id]`
 *   Then we update the matching user from our users list by grabbing a JSON version of our request body – `JSON.parse(req.body.data)`
 
 **Note,** we're not adding the extra complexity of validating the incoming data here. This is a **necessary part of production API development**, but for simplicities sake, we're trusting you to send the right data into the API request!
@@ -255,6 +255,6 @@ Almost identical the the update route, the main difference here is that we use t
 
 ### A fully functional Node API server using JSON files for data storage
 
-So there you go. A fully functional API server for whatever you'd like to use it for. You can [visit the GitHub repository for the starter API server](\"https://github.com/bpk68/api-server-starter\") and download, checkout or fork to your heart's content.
+So there you go. A fully functional API server for whatever you'd like to use it for. You can [visit the GitHub repository for the starter API server](https://github.com/bpk68/api-server-starter) and download, checkout or fork to your heart's content.
 
 If there's anything I've missed or that you'd like to know more about, let me know in the comments or shoot me an email to me\[at\]robkendal.co.uk.

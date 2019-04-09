@@ -9,7 +9,10 @@ tags:
   - Thoughts
   - Development
 ---
-Having just read a fascinating article on [CSS Tricks](\"https://css-tricks.com/the-slow-and-steady-refactor/\") by Robin Rendle, called '[The Slow and Steady Refactor](\"https://css-tricks.com/the-slow-and-steady-refactor/\")', I was compelled to share my own experiences with improving code on the go.
+
+![Rubber gloved hands scrubbing a toilet](/img/rawpixel-783429-unsplash_o-1.jpg)
+
+Having just read a fascinating article on [CSS Tricks](https://css-tricks.com/the-slow-and-steady-refactor/) by Robin Rendle, called '[The Slow and Steady Refactor](https://css-tricks.com/the-slow-and-steady-refactor/)', I was compelled to share my own experiences with improving code on the go.
 
 Large, lumbering technical debt and bloated, sluggish, poor-performant code has always been a problem in any development industry. Whether it's code that never quite got tidied up, new stuff that's piled on top of old, or even misunderstood dark arts style code left behind by a past developer, legacy technical debt can cause all sorts of problems.
 
@@ -17,7 +20,7 @@ I'm going to share my recent approach to tackling this monster in the coding cup
 
 First, however, let's take a look at how we end up with refactoring nightmares...
 
-_(Pssst...you can skip to the [continuous refactoring part](\"#enter-continuous-refactoring\") if you like)_
+_(Pssst...you can skip to the [continuous refactoring part](#enter-continuous-refactoring) if you like)_
 
 How did we get like this?
 -------------------------
@@ -51,15 +54,15 @@ Again, there's nothing wrong with keeping up-to-date, but diving in head-first w
 
 ### Bickering about what the other guys are doing
 
-There are a lot of arguments on Twitter at the moment in the development world around topics such as [CSS-in-JS](\"https://robkendal.co.uk/everthing-wrong-with-css-in-js/\") or how we're all doing HTML wrong. The irony is that rarely is any one side right or wrong, they just prefer a different approach.
+There are a lot of arguments on Twitter at the moment in the development world around topics such as [CSS-in-JS](https://robkendal.co.uk/everthing-wrong-with-css-in-js/) or how we're all doing HTML wrong. The irony is that rarely is any one side right or wrong, they just prefer a different approach.
 
-There's nothing horrendously bad about [CSS-in-JS](\"https://robkendal.co.uk/everthing-wrong-with-css-in-js/\"), for example (even though I hate the idea...\*shudders\*), but these debates tend to create a divide in how people tackle a common goal (in this case, including CSS into their final output).
+There's nothing horrendously bad about [CSS-in-JS](https://robkendal.co.uk/everthing-wrong-with-css-in-js/), for example (even though I hate the idea...\*shudders\*), but these debates tend to create a divide in how people tackle a common goal (in this case, including CSS into their final output).
 
 The upshot this can be a team mixing-and-matching coding conventions which makes refactoring difficult. It can also slow down on-boarding of new team members as they struggle to get to grips with different areas of the same app, developed in a different way.
 
 Besides, getting caught up in arguments about CSS-in-JS, or why framework 'ThingyJS' is better than library 'McGuffin.io' rather than '**which will work best for us to produce, robust, well-structured, maintainable, code that we can improve, scale and release quickly**', means you're asking the wrong questions.
 
-Enter continuous refactoring
+<a name="enter-continuous-refactoring"></a>Enter continuous refactoring
 ----------------------------
 
 So how can we tackle and reduce the burden of bloat and technical debt and make time to refactor? Simple, _continuous refactoring_.
@@ -82,7 +85,7 @@ There's a little more to it if you want to dig deeper of course. Here are some o
 
 It starts _before_ you touch an IDE...
 
-As [Robin alludes to in his article](\"https://css-tricks.com/the-slow-and-steady-refactor/\"), by slowing down and planning out _how_ we approach creating a code base before we dive in, setting standards, conventions and guidelines on how to address and reduce code clutter, and streamline things _now,_ we can side-step some headaches later on.
+As [Robin alludes to in his article](https://css-tricks.com/the-slow-and-steady-refactor/), by slowing down and planning out _how_ we approach creating a code base before we dive in, setting standards, conventions and guidelines on how to address and reduce code clutter, and streamline things _now,_ we can side-step some headaches later on.
 
 OK, it's not really refactoring, but by having a plan (a pre-emptive refactor, if you will) in place _before_ you start, the need to refactor at all can be reduced.
 
@@ -129,7 +132,7 @@ Some of those conventions might include:
 *   How large files should be (e.g. 300 line JS files are too long)
 *   When should a class be broken down into separate modules?
 *   At what point do we use a functional, stateless component over a regular React component class?
-*   Striving to use [arrow functions](\"https://robkendal.co.uk/arrow-functions-in-javascript/\") over regular 'function()' declarations
+*   Striving to use [arrow functions](https://robkendal.co.uk/arrow-functions-in-javascript/) over regular 'function()' declarations
 *   How to nest BEM classes in SASS
 
 Tools like linters for CSS and JS can help enforce some of these agreed conventions to a degree.

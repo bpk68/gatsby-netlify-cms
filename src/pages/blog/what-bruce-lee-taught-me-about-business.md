@@ -10,7 +10,7 @@ tags:
 ---
 ![Bruce Lee statue in Hong Kong](/img/bruce-lee-statue.jpg)
 
-This is a [shameless replication of my own article]("https://www.linkedin.com/pulse/what-bruce-lee-taught-me-business-robert-kendal/") with the same name from [LinkedIn]("https://www.linkedin.com/in/robkendal/"), but here we are.
+This is a [shameless replication of my own article](https://www.linkedin.com/pulse/what-bruce-lee-taught-me-business-robert-kendal/) with the same name from [LinkedIn](https://www.linkedin.com/in/robkendal/), but here we are.
 
 I've been an avid fan of martial arts since I was in my early double digits. I studied karate, taekwondo, kung foo and settled on ju jitsu as my primary passion. After a few years of training, I gained my shodan, the much coveted black belt.
 

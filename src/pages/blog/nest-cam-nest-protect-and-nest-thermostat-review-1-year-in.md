@@ -10,32 +10,35 @@ tags:
   - Thoughts
   - Reviews
 ---
+
+![Nest thermostat on a wall](/img/dan-lefebvre-1237717-unsplash.jpg)
+
 I would class myself as somewhat of a gadget person; not quite bleeding edge, super-early adopter, but certainly keen to try out new tech once it's bedded in a smidge.
 
-So it is that we came to smart-en up our home with a combo of [Nest products](\"https://nest.com/uk/\"): namely the nest thermostat, outdoor cam and nest protect (x2). (We do also have a bevy of Google Home do-dads that link in with the nest stuff, but more on that in a bit).
+So it is that we came to smart-en up our home with a combo of [Nest products](https://nest.com/uk/): namely the nest thermostat, outdoor cam and nest protect (x2). (We do also have a bevy of Google Home do-dads that link in with the nest stuff, but more on that in a bit).
 
 It's been close to 18 month's since we installed the trio of smart home accessories and so I thought it would be helpful for anyone wondering how well they work, how they integrate with each other and your existing stuff and really, are they worth it?
 
 Strap in for this mammoth article and let's find out. Pssst, here's a table of contents just in case you want to skip around!
 
-*   [Nest protect](\"#nest-protect-gen-2-\")
-*   [Nest outdoor cam](\"#nest-outdoor-cam\")
-*   [Nest thermostat](\"#nest-thermostat-gen-3-\")
-*   [Smart home app](\"#one-app-to-rule-them-all\")
-*   [The good parts](\"#overall-the-good-parts\")
-*   [The bad parts](\"#overall-the-bad-bits\")
-*   [Verdict - should you buy?](\"#the-verdict-down-to-brass-tacks\")
+*   [Nest protect](#nest-protect-gen-2)
+*   [Nest outdoor cam](#nest-outdoor-cam)
+*   [Nest thermostat](#nest-thermostat-gen-3)
+*   [Smart home app](#one-app-to-rule-them-all)
+*   [The good parts](#overall-the-good-parts)
+*   [The bad parts](#overall-the-bad-bits)
+*   [Verdict - should you buy?](#the-verdict-down-to-brass-tacks)
 
-![\"silver](\"https://images.unsplash.com/photo-1545259742-b4fd8fea67e4?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ\")
+![Nest Thermostat on a wall](https://images.unsplash.com/photo-1545259742-b4fd8fea67e4?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-Photo by [Dan LeFebvre](\"https://unsplash.com/@danlefeb?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit\") / [Unsplash](\"https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit\")
+Photo by [Dan LeFebvre](https://unsplash.com/@danlefeb?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit) / [Unsplash](https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit)
 
-Nest protect (gen 2)
+<a name="nest-protect-gen-2"></a>Nest protect (gen 2)
 --------------------
 
-We live in a very tall house. With three floors to cover, I opted for two [protects](\"https://nest.com/uk/smoke-co-alarm/overview/\") initially to cover floors one and two where we do most of our living and leave the ground floor to the built-in, tried and tested, shouty beep alarm (hey, these things are expensive you know!).
+We live in a very tall house. With three floors to cover, I opted for two [protects](https://nest.com/uk/smoke-co-alarm/overview/) initially to cover floors one and two where we do most of our living and leave the ground floor to the built-in, tried and tested, shouty beep alarm (hey, these things are expensive you know!).
 
-Managed to get a deal on [Shpock for two brand new ones](\"https://www.shpock.com/en-gb/search?q=nest%20thermostat\"), which saved us quite a lot of money. I'd recommend anyone having a look on similar sites for a bargain because:
+Managed to get a deal on [Shpock for two brand new ones](https://www.shpock.com/en-gb/search?q=nest%20thermostat), which saved us quite a lot of money. I'd recommend anyone having a look on similar sites for a bargain because:
 
 *   nest stuff is generally awesome (spoiler alert) but pricey
 *   nest themselves rarely have offers
@@ -47,9 +50,9 @@ So down to the nitty gritty...
 
 What can you say really, it's dead easy! Perhaps unsurprisingly for products produced by a company founded by ex-Apple designers, the packaging is millimeter perfect, excellent quality and gives a brilliant first impression - you can tell you've just got your mitts on something special.
 
-![](\"https://images.unsplash.com/photo-1547938094-b000547cbeb9?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ\")
+![Fire alarm switch](https://images.unsplash.com/photo-1547938094-b000547cbeb9?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-Photo by [Dave Phillips](\"https://unsplash.com/@teracomp?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit\") / [Unsplash](\"https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit\")
+Photo by [Dave Phillips](https://unsplash.com/@teracomp?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit) / [Unsplash](https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit)
 
 The units themselves are quite simple from an operation point of view. Everything's included in the box: shove the batteries in, screw the base plate to the wall, the product to the base plate and pair with the ubiquitous nest app - job done.
 
@@ -65,14 +68,14 @@ The best couple of features for me, however, have to be the nightlight and the s
 
 The spoken warnings are brilliant. Now, when you slightly burn the toast or overcook the bacon, instead of the old-school shouty alarms firing up and screaming incessantly until you frantically waft them with a tea towel as if your life depended upon it, the nest just gracefully warns you, quite calmly (and in a human voice) that you might have something going on as it's detected a mere wisp of smoke.
 
-Nest outdoor cam
+<a name="nest-outdoor-cam"></a>Nest outdoor cam
 ----------------
 
-The cost and installation faff has always put me off owning a full-blown CCTV system. However, with the advent of smart-cams becoming more mainstream and somewhat more affordable, we decided to opt for the [nest outdoor cam](\"https://nest.com/uk/cameras/\") - partly because it is well tested, reviewed, reliable and would fit with our other nest products.
+The cost and installation faff has always put me off owning a full-blown CCTV system. However, with the advent of smart-cams becoming more mainstream and somewhat more affordable, we decided to opt for the [nest outdoor cam](https://nest.com/uk/cameras/) - partly because it is well tested, reviewed, reliable and would fit with our other nest products.
 
-![\"selective](\"https://images.unsplash.com/photo-1520697830682-bbb6e85e2b0b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ\")
+![selective](https://images.unsplash.com/photo-1520697830682-bbb6e85e2b0b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-Photo by [Bernard Hermant](\"https://unsplash.com/@bernardhermant?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit\") / [Unsplash](\"https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit\")
+Photo by [Bernard Hermant](https://unsplash.com/@bernardhermant?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit) / [Unsplash](https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit)
 
 ### Installation
 
@@ -92,9 +95,9 @@ The picture quality is superb, very high resolution and the ability to both move
 
 #### Nest aware - the hidden subscription
 
-One really big drawback of the [outdoor cam](\"https://nest.com/uk/cameras/\") is the need to wed it to nest monthly subscription service, [nest aware](\"https://nest.com/uk/cameras/nest-aware/\").
+One really big drawback of the [outdoor cam](https://nest.com/uk/cameras/) is the need to wed it to nest monthly subscription service, [nest aware](https://nest.com/uk/cameras/nest-aware/).
 
-I should point out that you **absolutely do not have to take out a subscription**, in the same way that you _technically_ don't have to take out home insurance, but you really should. Similarly, to really get the most of your camera, you need [nest aware](\"https://nest.com/uk/cameras/nest-aware/\").
+I should point out that you **absolutely do not have to take out a subscription**, in the same way that you _technically_ don't have to take out home insurance, but you really should. Similarly, to really get the most of your camera, you need [nest aware](https://nest.com/uk/cameras/nest-aware/).
 
 There is nothing wrong with nest aware. As a service, it's great: it enables a bunch of extra features on your camera, such as zones (the ability to classify multiple areas of the camera's view to control detections) and continuous cloud-based video storage.
 
@@ -104,10 +107,10 @@ I know, I know, it's business, it's how the world works - subscriptions. But the
 
 Again, **nest aware works like a charm** and their new **basic plan is only £40** ish per year - it just stings a little (in mind and wallet) to have to pay _more_ on top of an already expensive product.
 
-Nest thermostat (gen 3)
+<a name="nest-thermostat-gen-3"></a>Nest thermostat (gen 3)
 -----------------------
 
-Having suffered at the hands of many, many a bad thermostat experience (it's an entire post in itself), the [nest thermostat](\"https://nest.com/uk/thermostats/\") is a breath of fresh air. This was our first purchase in the line of nest products and easily remains the best.
+Having suffered at the hands of many, many a bad thermostat experience (it's an entire post in itself), the [nest thermostat](https://nest.com/uk/thermostats/) is a breath of fresh air. This was our first purchase in the line of nest products and easily remains the best.
 
 We've gone from a complicated mess of buttons, levers, pulleys and masters degree in thermostat settings, to a simple push and a dial. Aces.
 
@@ -123,13 +126,13 @@ A dream really. I was skeptical in the first few days when it's in 'learning' mo
 
 After a week, we had a pretty good schedule going that warmed up the house for when we wanted it to be warm, not just turning the heating on at the time. You're encouraged to save energy via the green leaf system whereby you're rewarded with a little leaf icon whenever you set your thermostat to an energy-efficient setting - which is a nice touch and genuinely helpful.
 
-Obviously the thermostat looks great and operates in a much more slick fashion than a normal unit, but if all it did was turn heating on and off, you'd be one sad puppy. It's very exciting, therefore, that one of the best aspects is the continual learning and adjusting that the [nest thermostat](\"https://nest.com/uk/thermostats/\") makes on your behalf. Your daily schedule adjusts and shifts to suit things such as weather, day/night schedules or direct sunlight shining on the thermostat, which would usually skew the temperature readings.
+Obviously the thermostat looks great and operates in a much more slick fashion than a normal unit, but if all it did was turn heating on and off, you'd be one sad puppy. It's very exciting, therefore, that one of the best aspects is the continual learning and adjusting that the [nest thermostat](https://nest.com/uk/thermostats/) makes on your behalf. Your daily schedule adjusts and shifts to suit things such as weather, day/night schedules or direct sunlight shining on the thermostat, which would usually skew the temperature readings.
 
 The net results of this ongoing monitoring and tweaking means that we've rarely had a cold house or felt the need to fiddle with the heating at all, if ever. The heat's on when we need it to be and we're always comfortable.
 
 Finally, a relatively new feature - nearly two years on - is that in summer and winter, we're greeted with a clever, seasonal schedule that aims to help reduce energy usage (i.e. save you money) by altering your schedule to a more lean (in summer) affair. We've definitely noticed a reduction in monthly fuel costs by at least £10-£20.
 
-One app to rule them all
+<a name="one-app-to-rule-them-all"></a>One app to rule them all
 ------------------------
 
 Whichever combination of nest products you opt for, it's nice to have a single source of truth in the nest app.
@@ -138,18 +141,18 @@ From their single app, you can check the status of the smoke alarms (worryingly,
 
 It's a simple, slick app that lets you do just about everything you'd be able to via your nest account in a browser, changing whatever settings you wish. Everything talks to each other and you do get a general feel that you're adding to a united system for your home, all the connected parts interoperating and working in your home's best interest.
 
-Overall, the good parts
+<a name="overall-the-good-parts"></a>Overall, the good parts
 -----------------------
 
-![\"person](\"https://images.unsplash.com/photo-1518335935020-cfd6580c1ab4?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ\")
+![person](https://images.unsplash.com/photo-1518335935020-cfd6580c1ab4?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-Photo by [Katya Austin](\"https://unsplash.com/@katya?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit\") / [Unsplash](\"https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit\")
+Photo by [Katya Austin](https://unsplash.com/@katya?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit) / [Unsplash](https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit)
 
 We've not encountered much in the way of negatives thus far. The nest support system is a little lacking (which we'll get to in a minute), but each of the products works superbly, is a pleasure to set up with no fuss no muss and is presented excellently and to a high standard - something you'd expect for the price range of the various products nest offers.
 
 The way each product snaps into its own place within this smart home ecosystem, whilst integrating seamlessly, makes adding more nest products a rewarding and obvious choice.
 
-Overall, the bad bits
+<a name="overall-the-bad-bits"></a>Overall, the bad bits
 ---------------------
 
 As with just about anything in life, there will be a few grumbles here and there, but I genuinely don't have any that are even worth mentioning here. In terms of the products, the build quality is superb and installation and use is friction-free.
@@ -172,7 +175,7 @@ All of these things were practically impossible because of the nature of how the
 
 Eventually, after several more support requests, reaching out on Twitter and generally pleading with them, we were issued a replacement unit and a box to send the defunct one back. This part was smooth and hassle-free, so it's a shame it had to be such a headache in the first place.
 
-The verdict: down to brass tacks
+<a name="the-verdict-down-to-brass-tacks"></a>The verdict: down to brass tacks
 --------------------------------
 
 The experience with nest support notwithstanding, overall the whole family love our nest smart home. It's made life a little easier, more convenient, saved us some money and is a pleasure to use.

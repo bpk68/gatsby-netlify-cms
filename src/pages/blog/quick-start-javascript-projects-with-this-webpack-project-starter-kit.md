@@ -9,18 +9,18 @@ tags:
   - Development
   - JavaScript
 ---
-I feel as if I've written a number of non-technical posts lately, mainly because I've had a lot of broader concepts floating around in my noggin. So if you're interested in article on [tech tests being relevant](\"https://robkendal.co.uk/are-tech-tests-still-relevant/\"), [continuous refactoring](\"https://robkendal.co.uk/continuous-refactoring-avoiding-technical-debt-in-the-here-and-now/\") or whether you should [use nest stuff in your smart home](\"https://robkendal.co.uk/nest-smart-home-review/\"), you're all set.
+I feel as if I've written a number of non-technical posts lately, mainly because I've had a lot of broader concepts floating around in my noggin. So if you're interested in article on [tech tests being relevant](https://robkendal.co.uk/are-tech-tests-still-relevant/), [continuous refactoring](https://robkendal.co.uk/continuous-refactoring-avoiding-technical-debt-in-the-here-and-now/) or whether you should [use nest stuff in your smart home](https://robkendal.co.uk/nest-smart-home-review/), you're all set.
 
-But let's not do that here. Here, I'm going to share with you my quick and simple [starter kit](\"https://github.com/bpk68/web-template\") for [Webpack](\"https://webpack.js.org/\") based projects.
+But let's not do that here. Here, I'm going to share with you my quick and simple [starter kit](https://github.com/bpk68/web-template) for [Webpack](https://webpack.js.org/) based projects.
 
-(_Pssst! If you'd rather just investigate the GitHub repo for the Webkit project starter then go there via this link:_ [https://github.com/bpk68/web-template](\"https://github.com/bpk68/web-template\")_)_
+(_Pssst! If you'd rather just investigate the GitHub repo for the Webkit project starter then go there via this link:_ [https://github.com/bpk68/web-template](https://github.com/bpk68/web-template)_)_
 
 Why Webpack (vs Gulp or Grunt)?
 -------------------------------
 
 **Gulp** and **Grunt** have reigned victorious as JavaScript project favourites for many a year. As JavaScript task runners, both Gulp and Grunt do a great job of minifying code, cleaning CSS, transforming template files and, well, just about anything you can imagine as a task that can be run during a build.
 
-![](\"https://robkendal.co.uk/content/images/2019/02/logo-on-white-bg.png\")
+![](https://robkendal.co.uk/content/images/2019/02/logo-on-white-bg.png)
 
 Webpack - the bundling system for JS projects
 
@@ -44,16 +44,16 @@ The problem _I_ faced when I started regularly using Webkit to kick-off projects
 
 By setting up a blank project, with all of the above configured out of the box, I can focus on the productivity and excitement of a new project, _without_ getting bogged down in repetitive set up files.
 
-![\"power](\"https://images.unsplash.com/photo-1493994055174-cfa612a0d07c?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ\")
+![power](https://images.unsplash.com/photo-1493994055174-cfa612a0d07c?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-Photo by [Fancycrave](\"https://unsplash.com/@fancycrave?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit\") / [Unsplash](\"https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit\")
+Photo by [Fancycrave](https://unsplash.com/@fancycrave?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit) / [Unsplash](https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit)
 
 Let me introduce the (finished?) Webpack starter kit
 ----------------------------------------------------
 
-OK, so you're never _really_ finished – there'll always be tweaking and changes to make as needs shift. But for now, the current state of the [publicly available Webpack starter project](\"https://github.com/bpk68/web-template\") is a great jumping off point for a web app project.
+OK, so you're never _really_ finished – there'll always be tweaking and changes to make as needs shift. But for now, the current state of the [publicly available Webpack starter project](https://github.com/bpk68/web-template) is a great jumping off point for a web app project.
 
-It includes all the configuration baked in and ready for deploying to a server of your choice. It even includes some non-Webpack packages, such as the amazing [Semantic Release](\"https://github.com/semantic-release/semantic-release\").
+It includes all the configuration baked in and ready for deploying to a server of your choice. It even includes some non-Webpack packages, such as the amazing [Semantic Release](https://github.com/semantic-release/semantic-release).
 
 ### What's included?
 
@@ -81,14 +81,14 @@ Under the `/config` folder, you'll find these three files:
 
 Finally, we have the package.json file for the project which includes a number of plugins to help Webpack do its stuff. Here's a breakdown of what does what:
 
-*   `@babel/polyfill` - polyfill from [BabelJs](\"https://babeljs.io/\") that helps you to run the latest JS features (in our case, from ES6) now.
-*   `semantic-release` - [Semantic Release](\"https://github.com/semantic-release/semantic-release\") helps to automate the scheduled release workflow including adding version numbers, updating release notes, and pushing releases to GitHub/npm. This can be deleted if it's not to your liking.
+*   `@babel/polyfill` - polyfill from [BabelJs](https://babeljs.io/) that helps you to run the latest JS features (in our case, from ES6) now.
+*   `semantic-release` - [Semantic Release](https://github.com/semantic-release/semantic-release) helps to automate the scheduled release workflow including adding version numbers, updating release notes, and pushing releases to GitHub/npm. This can be deleted if it's not to your liking.
 *   `babel-loader` - this adds Babel support and transpilation to Webpack during bundling of JS files.
 *   `clean-webpack-plugin` - simply empties the `/dist` folder during a build to remove any previous code/assets from the last build.
-*   `html-webpack-plugin` - an [official Webpack plugin](\"https://webpack.js.org/plugins/html-webpack-plugin/\") that helps to give you more control over the creation of html files from which to server your bundles.
-*   `copy-webpack-plugin` - copies files from the source directory into the build/output directory. You can view the [npm package here](\"https://www.npmjs.com/package/copy-webpack-plugin\").
-*   `mini-css-extract-plugin` - the [mini-css-extract-plugin](\"https://github.com/webpack-contrib/mini-css-extract-plugin\") splits your CSS into separate files – a little like how the JS files can be chunked. It supports on-demand loading of CSS and sourcemaps.
-*   `optimize-css-assets-webpack-plugin` - [optimises and minifies CSS](\"https://www.npmjs.com/package/optimize-css-assets-webpack-plugin\") assets during the production build.
+*   `html-webpack-plugin` - an [official Webpack plugin](https://webpack.js.org/plugins/html-webpack-plugin/) that helps to give you more control over the creation of html files from which to server your bundles.
+*   `copy-webpack-plugin` - copies files from the source directory into the build/output directory. You can view the [npm package here](https://www.npmjs.com/package/copy-webpack-plugin).
+*   `mini-css-extract-plugin` - the [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin) splits your CSS into separate files – a little like how the JS files can be chunked. It supports on-demand loading of CSS and sourcemaps.
+*   `optimize-css-assets-webpack-plugin` - [optimises and minifies CSS](https://www.npmjs.com/package/optimize-css-assets-webpack-plugin) assets during the production build.
 *   `uglifyjs-webpack-plugin` - nice and simple, this one takes your beautiful JS files and transforms them into less-readable, uglified versions that are smaller and harder to understand (keep your coding secrets safe...ish).
 *   `style, css, file, image-loader` - these are all official Webpack add-ons that help you to process different file types based on some rules (this is set in the modules section of Webpack config files). For example, we catch CSS files, run them through the `style-loader` helper to bundle them into our final build output.
 
@@ -97,7 +97,7 @@ Using the Webpack starter project
 
 Hopefully, it should be really easy. Here's how to get started:
 
-1.  Fork the repo (get it here: [https://github.com/bpk68/web-template](\"https://github.com/bpk68/web-template\")) or download the raw files.
+1.  Fork the repo (get it here: [https://github.com/bpk68/web-template](https://github.com/bpk68/web-template)) or download the raw files.
 2.  Run `yarn install` (assuming you have yarn installed on your machine) to add the npm packages.
 3.  Edit any settings or config files to suit.
 4.  Edit `src/index.js` to create something magical.

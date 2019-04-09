@@ -24,11 +24,11 @@ I came across this term on a poster in a school visit. It was a comparative list
 * I've tried everything (_negative_) | what am I missing? (_growth_)
 * My friend's always doing well (_negative_) | what can I learn from them? (_growth_)
 
-It's inevitable as a developer that you will hit some kind of wall; whether it's something new that you don't fully grasp yet (_cough_ [Redux]("https://redux.js.org/")) or a difficult challenge to solve using JavaScript. And, when you hit these walls, it's easy to feel overwhelmed, or not good enough, or just stuck.
+It's inevitable as a developer that you will hit some kind of wall; whether it's something new that you don't fully grasp yet (_cough_ [Redux](https://redux.js.org/)) or a difficult challenge to solve using JavaScript. And, when you hit these walls, it's easy to feel overwhelmed, or not good enough, or just stuck.
 
 ![Fixed mindset vs. growth mindset](/img/growth-mindset-examples.png "Fixed mindset vs. growth mindset. (credit: https://www.big-change.org/)")
 
-By shifting my thinking, by applying these sorts of [positive repurposing of dead-end mental pathways]("https://www.mindsetworks.com/science/") has helped me rebound and hit my goals, especially when it comes to overcoming challenges at work.
+By shifting my thinking, by applying these sorts of [positive repurposing of dead-end mental pathways](https://www.mindsetworks.com/science/) has helped me rebound and hit my goals, especially when it comes to overcoming challenges at work.
 
 As a bonus, because of the repetitive and objective nature of training this mindset into your little one (i.e. another human), it becomes easier to help motivate your colleagues into action - **Pro tip**: baby voices work less on your colleages!
 

@@ -11,11 +11,11 @@ tags:
   - JavaScript
   - Tutorials
 ---
-Following on from my recent article on [how to build a Node JS API server that uses JSON files](\"https://robkendal.co.uk/build-a-restful-node-api-server-using-json-files/\"), I wanted to share another recent experience I had: **using CSS custom properties to apply a custom theme** to a React website.
+Following on from my recent article on [how to build a Node JS API server that uses JSON files](https://robkendal.co.uk/build-a-restful-node-api-server-using-json-files/), I wanted to share another recent experience I had: **using CSS custom properties to apply a custom theme** to a React website.
 
 Let's get to it!
 
-**PS -** as always, [feel free to skip to the meat and potatoes of the article](\"#building-a-custom-theme-machine\").
+**PS -** as always, [feel free to skip to the meat and potatoes of the article](#building-a-custom-theme-machine).
 
 Disclaimer: there is no React...
 --------------------------------
@@ -28,7 +28,7 @@ Straight out the gates I'm going to preface this entire post with an admission: 
 Understanding custom CSS properties
 -----------------------------------
 
-I was inspired recently by the [Smashing Mag Book 6](\"https://www.smashingmagazine.com/2018/09/smashing-book-6-release/\") which had a huge section devoted to CSS custom properties, written by [Mike Riethmuller](\"https://www.madebymike.com.au/\") – in my opinion, one of the pioneers of using custom properties in the real world and you should go read his work.
+I was inspired recently by the [Smashing Mag Book 6](https://www.smashingmagazine.com/2018/09/smashing-book-6-release/) which had a huge section devoted to CSS custom properties, written by [Mike Riethmuller](https://www.madebymike.com.au/) – in my opinion, one of the pioneers of using custom properties in the real world and you should go read his work.
 
 Custom properties (also referred to as CSS variables, although they are really more like properties in how they're declared and used) offer a huge advantage in that they are dynamically scoped and resolved at runtime where they will update their uses.
 
@@ -47,7 +47,7 @@ I'm not going to revisit well documented information here; instead, I will prese
 Loading themes dynamically
 --------------------------
 
-At IAM Cloud, we have a suite of [products in the enterprise authentication space](\"https://www.iamcloud.com/\"). One such product allows a level of customisation per client, ultimately applying a set of high-level style changes, heading colours, button colours, background images, etc.
+At IAM Cloud, we have a suite of [products in the enterprise authentication space](https://www.iamcloud.com/). One such product allows a level of customisation per client, ultimately applying a set of high-level style changes, heading colours, button colours, background images, etc.
 
 As we're redeveloping our products into separate UI platforms, it became apparent that we needed to handle such custom themes in a more dynamic fashion without having to download additional (potentially large) stylesheets or maintain a growing list of customer-specific stylesheets – any changes to which will require _a lot_ of work to edit them all...
 
@@ -64,7 +64,7 @@ Let's work through the steps and build up a dynamically loaded theme for ourselv
 Building a custom theme machine
 -------------------------------
 
-For those eager beavers among you, [head over to the finished project](\"https://codesandbox.io/embed/5z6yjrpr84\") to see what we're building. I'm using [CodeSandbox.io](\"https://codesandbox.io/\") to host the files which in turn uses the impressive [Parcel](\"https://parceljs.org/getting_started.html\") for bundling (PS - I'm switching my projects to Parcel from Webpack in the future and will be creating a Parcel Start Kit to match my Webpack Starter Kit).
+For those eager beavers among you, [head over to the finished project](https://codesandbox.io/embed/5z6yjrpr84) to see what we're building. I'm using [CodeSandbox.io](https://codesandbox.io/) to host the files which in turn uses the impressive [Parcel](https://parceljs.org/getting_started.html) for bundling (PS - I'm switching my projects to Parcel from Webpack in the future and will be creating a Parcel Start Kit to match my Webpack Starter Kit).
 
 For starters, our file structure is quite simple:
 
@@ -80,7 +80,7 @@ Nothing too complex here, but each file plays a part:
 
 ### Looking at the default styles
 
-If you open up the `index.html` file, you'll notice a couple of things. Firstly we're pulling in the fantastic [Bulma CSS framework](\"https://bulma.io/documentation/\") in the head using this line:
+If you open up the `index.html` file, you'll notice a couple of things. Firstly we're pulling in the fantastic [Bulma CSS framework](https://bulma.io/documentation/) in the head using this line:
 
      <!-- grab the Bulma library (for some good base styles) -->\n    <link\n      rel="stylesheet"\n      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"\n    />\n
 
@@ -102,7 +102,7 @@ Our base set of styles look like this:
 
 Which gives us a lovely looking background with a content box like this:
 
-![](\"/content/images/2019/04/starting-point.png\")
+![](/content/images/2019/04/starting-point.png)
 
 Our starting page with base styles applied
 
@@ -122,7 +122,7 @@ Inside our `index.js` file, we have a fairly straightforward couple of things go
 
 \\n
 
-[David Walsh's helpful article](\"https://davidwalsh.name/add-rules-stylesheets\") gives us some help to deal with a Webkit quirk here, but this function is quite simple: create a style element; add it to the document.head; finally, return the actual stylesheet so that we can add styles to this later on.
+[David Walsh's helpful article](https://davidwalsh.name/add-rules-stylesheets) gives us some help to deal with a Webkit quirk here, but this function is quite simple: create a style element; add it to the document.head; finally, return the actual stylesheet so that we can add styles to this later on.
 
 Next, we have an `init()` function that kicks everything off:
 
@@ -142,7 +142,7 @@ Now for the fun part, building the theme. Inside the `/helpers/themeBuilder.js` 
 
 \\n
 
-Nothing too fancy here, although you might not be familiar with the ES6 [template literal syntax](\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals\") (also called the backtick string notation or template strings). Whilst ultimately producing a string type, the backtick just allows us to write strings over many lines more easily than traditional JS string syntax. Additionally, we can include variables within those strings much neater than before using the `${myVariableHere}` phrase.
+Nothing too fancy here, although you might not be familiar with the ES6 [template literal syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) (also called the backtick string notation or template strings). Whilst ultimately producing a string type, the backtick just allows us to write strings over many lines more easily than traditional JS string syntax. Additionally, we can include variables within those strings much neater than before using the `${myVariableHere}` phrase.
 
 In the function, we build up a string from our custom properties by calling the helper method, `insertPropertyIfValid(cssProperty, customPropertyValue)`. This is a tiny function towards the top of the file that just checks if our custom property string is not null, undefined, or empty.
 
@@ -166,13 +166,13 @@ I feel this boils down to personal preference. Using the `setProperty()` method 
 
 So, here's our before...
 
-![](\"/content/images/2019/04/starting-point-1.png\")
+![](/content/images/2019/04/starting-point-1.png)
 
 Base elements with no customisation
 
 And here's what you get (after about 1.5 seconds delay) when our customised styles are applied:
 
-![](\"/content/images/2019/04/styles-applied.png\")
+![](/content/images/2019/04/styles-applied.png)
 
 Our same content with our custom client theme applied
 

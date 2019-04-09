@@ -10,32 +10,34 @@ tags:
   - JavaScript
   - Tutorials
 ---
+
+![Floating point numbers on a computer screen](/img/mika-baumeister-703680-unsplash.jpg)
+
 If you've ever found yourself asking 'how can I access Google Sheet spreadsheets with JavaScript?', then you're probably not alone. You only have to type something like 'reading google sheets data using javascript' into Google (or Duck Duck Go as I'm currently using :D ) and you'll be inundated with a bevvy of solutions to this conundrum.
 
 The problem is, in my experience they're either very complex and overblown, or quite difficult to get up and running with (e.g. poor documentation), or they're just a bit too prescriptive with how they serve you those precious results.
 
 So, I built my own...
 
-![\"Yeah!!](\"https://images.unsplash.com/photo-1519635694260-6af6fc200c89?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ\")
+![Yeah!! On colourful background](https://images.unsplash.com/photo-1519635694260-6af6fc200c89?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-Photo by [rawpixel](\"https://unsplash.com/@rawpixel?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit\") / [Unsplash](\"https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit\")
+Photo by [rawpixel](https://unsplash.com/@rawpixel?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit) / [Unsplash](https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit)
 
-Enter the Google Sheets Reader
-------------------------------
+## Enter the Google Sheets Reader
 
-Because I couldn't find something that worked well for my needs (and I didn't want to wrestle with the full-blown [Google Sheets API](\"https://developers.google.com/sheets/api/\")), I decided to build a [quick, lightweight utility](\"https://github.com/bpk68/g-sheets-api.git#readme\") to get hold of some simple data from within a Google Sheet and return it to me in a suitable fashion for me to deal with as I please.
+Because I couldn't find something that worked well for my needs (and I didn't want to wrestle with the full-blown [Google Sheets API](https://developers.google.com/sheets/api/)), I decided to build a [quick, lightweight utility](https://github.com/bpk68/g-sheets-api.git#readme) to get hold of some simple data from within a Google Sheet and return it to me in a suitable fashion for me to deal with as I please.
 
 The **Google Sheets Reader** is available on GitHub and the NPM package repository here:
 
-*   [GitHub project](\"https://github.com/bpk68/g-sheets-api.git#readme\")
-*   [NPM package](\"https://www.npmjs.com/package/g-sheets-api\")
+*   [GitHub project](https://github.com/bpk68/g-sheets-api.git#readme)
+*   [NPM package](https://www.npmjs.com/package/g-sheets-api)
 
 We'll go into the why's and wherefore's in a moment, but let's cut to the chase and explain how to use it first.
 
 How do I use it?
 ----------------
 
-Glad you asked. Head on over to the [GitHub repo and take a look for yourself](\"https://github.com/bpk68/g-sheets-api.git#readme\"). I've put together a decent readme file detailing exactly how to consume and use the Google Sheets Reader for yourself in your own projects.
+Glad you asked. Head on over to the [GitHub repo and take a look for yourself](https://github.com/bpk68/g-sheets-api.git#readme). I've put together a decent readme file detailing exactly how to consume and use the Google Sheets Reader for yourself in your own projects.
 
 ### Firstly, is this right for my needs?
 
@@ -44,14 +46,14 @@ The Google Sheets Reader is a simple, one-way data fetcher that allows for _read
 *   You are able to publish your Google Sheet publicly
 *   You have a relatively simple data set in a single sheet (multiple sheets is a planned feature)
 *   You only need to _read_ the data
-*   You don't need access to more advanced functionality (such as caching or OAuth) provided by the [official Google Sheets API](\"https://developers.google.com/sheets/api/\").
+*   You don't need access to more advanced functionality (such as caching or OAuth) provided by the [official Google Sheets API](https://developers.google.com/sheets/api/).
 *   You want a simple, straightforward means to get data > do things with data > celebrate!
 
 ### Enough chatter, let me use the Google Sheets Reader!
 
 The basic premise is that you need to do the following:
 
-1.  Set up a Google Sheet for public access (there's a guide on the [GitHub project's readme file](\"https://github.com/bpk68/g-sheets-api.git#readme\"))
+1.  Set up a Google Sheet for public access (there's a guide on the [GitHub project's readme file](https://github.com/bpk68/g-sheets-api.git#readme))
 2.  Add the npm package to your repository
 3.  Call the reader function and pass in a set of options and a callback function to handle the results
 
@@ -65,17 +67,40 @@ or, if you prefer Yarn,
 
 Next, you need to call the reader in your project:
 
-    const reader = require('g-sheets-api');\nconst readerOptions = {\n sheetId: '1-CmQumuz5ZiOvINhphEMgfplrJacQhD623RROcOBTAg',\n returnAllResults: false,\n filter: {\n  "key to filter on": "value to match" \n }\n};\n\nreader(readerOptions, results => {\n /* Do something amazing with the results */\n});\n
+```javascript
+const reader = require('g-sheets-api');
+const readerOptions = {
+	sheetId: '1-CmQumuz5ZiOvINhphEMgfplrJacQhD623RROcOBTAg',
+	returnAllResults: false,
+	filter: {
+		"key to filter on": "value to match" 
+	}
+};
 
-\\n
+reader(readerOptions, results => {
+	/* Do something amazing with the results */
+});
+```
 
 The initial data soup that's returned from Google Sheets is neither JSON in nature, nor particularly friendly. In fact, it's a JSON-esque dump of cell values from the Sheet in question.
 
 What the reader does for you is fetch this data swamp, trims and neatens it before parsing it into proper JSON. Then, it formats this collection of JSON cells into an array of row objects that look like this:
 
-    [\n { // row 1\n  "column 1 header": "column 1, row 1 value",\n  "column 2 header": "column 2, row 1 value",\n  "column 3 header": "column 3, row 1 value",\n },\n { // row 2\n  "column 1 header": "column 1, row 2 value",\n  "column 2 header": "column 2, row 2 value",\n  "column 3 header": "column 3, row 2 value",\n },\n // etc.\n]\n
-
-\\n
+```json
+[
+	{ // row 1
+		"column 1 header": "column 1, row 1 value",
+		"column 2 header": "column 2, row 1 value",
+		"column 3 header": "column 3, row 1 value",
+	},
+	{ // row 2
+		"column 1 header": "column 1, row 2 value",
+		"column 2 header": "column 2, row 2 value",
+		"column 3 header": "column 3, row 2 value",
+	},
+	// etc.
+]
+```
 
 That way, you're free to deal with them however you wish!
 
@@ -111,6 +136,6 @@ Useful links
 
 If you'd like to know more about the utility or explore the code, then please take a look; feel free to leave comments, fork the work, suggest improvements - I'm all ears.
 
-*   [GitHub project](\"https://github.com/bpk68/g-sheets-api.git#readme\")
-*   [NPM package](\"https://www.npmjs.com/package/g-sheets-api\")
-*   [Google Sheets official API](\"https://developers.google.com/sheets/api/\")
+*   [GitHub project](https://github.com/bpk68/g-sheets-api.git#readme)
+*   [NPM package](https://www.npmjs.com/package/g-sheets-api)
+*   [Google Sheets official API](https://developers.google.com/sheets/api/)

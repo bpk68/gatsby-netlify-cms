@@ -10,13 +10,16 @@ tags:
   - Controversial
   - Thoughts
 ---
-I recently wrote about [job hunting in today's tech landscape](\"https://robkendal.co.uk/how-to-land-that-dev-job-youve-always-wanted/\") (mainly development) and shared my experiences, tips and tricks. Following on from that article and several discussions with ex-colleagues and other friends who are now in a job hunting position, the topic always drifts back to one stage in the hiring process in particular: the dreaded technical tests...\*queue the foreboding music\*.
+
+![Row of seats in a lecture hall](/img/nathan-dumlao-572049-unsplash.jpg)
+
+I recently wrote about [job hunting in today's tech landscape](https://robkendal.co.uk/how-to-land-that-dev-job-youve-always-wanted/) (mainly development) and shared my experiences, tips and tricks. Following on from that article and several discussions with ex-colleagues and other friends who are now in a job hunting position, the topic always drifts back to one stage in the hiring process in particular: the dreaded technical tests...\*queue the foreboding music\*.
 
 This got me to thinking: 'how relevant are tech tests in today's market, and are they still a useful tool to make a hiring decision?'
 
-![\"person](\"https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ\")
+![person](https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-Photo by [Helloquence](\"https://unsplash.com/@helloquence?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit\") / [Unsplash](\"https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit\")
+Photo by [Helloquence](https://unsplash.com/@helloquence?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit) / [Unsplash](https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit)
 
 The problem with tech tests
 ---------------------------
@@ -55,15 +58,15 @@ Well, yes and no...
 
 Yes, you should be able to see a lot more scope of what the candidate is capable of, but the problem with these test types isn't their size. The problem is that it is quite common to expect an applicant to spend many hours of their time **for free** to do them.
 
-![\"woman](\"https://images.unsplash.com/photo-1530858176730-cb20dac36fe1?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ\")
+![woman](https://images.unsplash.com/photo-1530858176730-cb20dac36fe1?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-Photo by [rawpixel](\"https://unsplash.com/@rawpixel?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit\") / [Unsplash](\"https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit\")
+Photo by [rawpixel](https://unsplash.com/@rawpixel?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit) / [Unsplash](https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit)
 
 Yes, they're applying _to you,_ for a job with _your_ company, but the process is still a two-way street. Plus, they might be applying to several different positions and multiples of five or six hours of tests soon add up - especially when you're asking them to basically write a mini app for you for _nothing._
 
 Designers have often been placed in this position by prospective clients who are (however unwittingly) quick to undervalue their skills and time by demanding copious amounts of spec-work; work undertaken on a speculative basis that they might 'win the tender', 'get the job', 'nail the pitch'.
 
-The design industry pushed back at this and the [No!Spec website](\"https://www.nospec.com/\") encapsulates this movement perfectly.
+The design industry pushed back at this and the [No!Spec website](https://www.nospec.com/) encapsulates this movement perfectly.
 
 There's nothing wrong in seeing how someone works, but don't ask them to provide too much of their time for naught, just for the prospect of a final interview.
 
@@ -91,7 +94,7 @@ I've also seen (and experienced) tests with very strict rules to follow. These r
 
 Yes, you need some sort of limits - time-boxing the test, for example - but by placing unrealistic restrictions on tests that otherwise wouldn't (or _shouldn't_) exist in the real-world, we narrow our view of that applicant in a real-world scenario.
 
-I mean, who hasn't looked for help on [Stack Overflow](\"https://www.stackoverflow.com\") or referred back to a set of docs because they can't possibly keep the entire JestJS api in their head?
+I mean, who hasn't looked for help on [Stack Overflow](https://www.stackoverflow.com) or referred back to a set of docs because they can't possibly keep the entire JestJS api in their head?
 
 Where tech tests can help
 -------------------------

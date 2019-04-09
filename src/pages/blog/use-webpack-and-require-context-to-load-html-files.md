@@ -14,17 +14,17 @@ There are a lot of ways to build a website these days using templates and templa
 
 But sometimes you just need to grab some HTML from some files and get it out onto a page. In this code article, I'm going to show you how to load fragments of HTML from a folder and output them onto a page using Webpack and `require.context()`.
 
-If you just want to [jump to the bit where we start using require.context](\"#webpack-and-require-context-to-the-rescue-\") to load HTML files, go right ahead.
+If you just want to [jump to the bit where we start using require.context](#webpack-and-require-context-to-the-rescue-) to load HTML files, go right ahead.
 
-![\"cube](\"https://images.unsplash.com/photo-1529700215145-58542a1f36b6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ\")
+![cube](https://images.unsplash.com/photo-1529700215145-58542a1f36b6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-Photo by [Christian Fregnan](\"https://unsplash.com/@christianfregnan?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit\") / [Unsplash](\"https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit\")
+Photo by [Christian Fregnan](https://unsplash.com/@christianfregnan?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit) / [Unsplash](https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit)
 
 ### Why use require.context or HTML fragments at all?
 
 If you're looking to build a website or even a small web app then there are probably more straightforward, scalable methods – see the numerous options mentioned at the start of the article.
 
-Recently, however, I've been building a component UI library (using the amazing [Bulma CSS framework](\"http://bulma.io/\")) and wanted a quick way to simply grab some HTML and include it in an end page – or series of pages – to show a live version of the library in action (a bit like [Bulma's own docs](\"http://bulma.io/\")).
+Recently, however, I've been building a component UI library (using the amazing [Bulma CSS framework](http://bulma.io/)) and wanted a quick way to simply grab some HTML and include it in an end page – or series of pages – to show a live version of the library in action (a bit like [Bulma's own docs](http://bulma.io/)).
 
 The HTML files weren't complete documents, however, simply _fragments_ of HTML that encapsulated a particular component from the library to show its markup. Also, I wanted them broken up into separate files in a folder for better organisation in the project. The main issues this presents is finding a reliable way to grab _all_ the files since they're broken up parts, not entire HTML documents, and grabbing them in a logical order, rather than having to have one loooooong document.
 
@@ -41,7 +41,7 @@ Well, there isn't one really. There are lots of solutions involving `iframe` and
 
 ### Using the shiny new HTML import feature
 
-There is a brilliant article by Eric Bidelman on [using HTML imports](\"https://www.html5rocks.com/en/tutorials/webcomponents/imports/\"). His method uses the current [Editor's Draft spec from W3C](\"https://w3c.github.io/webcomponents/spec/imports/\") for the importing of HTML files using the `link` element in the head of a document as follows:
+There is a brilliant article by Eric Bidelman on [using HTML imports](https://www.html5rocks.com/en/tutorials/webcomponents/imports/). His method uses the current [Editor's Draft spec from W3C](https://w3c.github.io/webcomponents/spec/imports/) for the importing of HTML files using the `link` element in the head of a document as follows:
 
     <link rel="import" href="/path/to/awesome/file.html">\n
 
@@ -55,7 +55,7 @@ From here, you can use some really simple JavaScript to grab the HTML content an
 
 Whilst this will need a little more JavaScript hacking to handle multiple imports programmatically, it's a nice clean solution that works pretty well using native features. **Unfortunately**, this feature is currently in **working draft** stage and not quite ready for production use.
 
-Checking out [Can I Use's site](\"https://caniuse.com/#feat=imports\") (at the time of writing) it's only available in the latest versions of Chrome and Opera. Sad face.
+Checking out [Can I Use's site](https://caniuse.com/#feat=imports) (at the time of writing) it's only available in the latest versions of Chrome and Opera. Sad face.
 
 ### Using JavaScript to load it up
 
@@ -72,11 +72,11 @@ Webpack and require.context() to the rescue!
 
 So then, since we're already using Webpack to build this thing, let's leverage one of Webpack's great features: require.context().
 
-(By the way, if you're looking for a [good Webpack starter kit](\"https://robkendal.co.uk/webpack-project-starter-kit/\"), then I have a [great template available on GitHub](\"https://github.com/bpk68/web-template\"))
+(By the way, if you're looking for a [good Webpack starter kit](https://robkendal.co.uk/webpack-project-starter-kit/), then I have a [great template available on GitHub](https://github.com/bpk68/web-template))
 
 ### First, configure html-loader to process our files
 
-Firstly, because we're loading HTML files, we'll need to install Webpack's [html-loader](\"https://webpack.js.org/loaders/html-loader/\"); an easy feat with npm/yarn:
+Firstly, because we're loading HTML files, we'll need to install Webpack's [html-loader](https://webpack.js.org/loaders/html-loader/); an easy feat with npm/yarn:
 
 `npm i -D html-loader` or `yarn add --dev html-loader`
 
@@ -102,7 +102,7 @@ Here's what I did to achieve just that:
 
 \\n
 
-And it's as simple as that! Of course, even those scant few lines can be condensed into an [anonymous function](\"https://robkendal.co.uk/arrow-functions-in-javascript/\") (really, an example of an [Immediately Invoked Function Expression](\"https://blog.mgechev.com/2012/08/29/self-invoking-functions-in-javascript-or-immediately-invoked-function-expression/\") or IIFE) to create an even cleaner, terser end result:
+And it's as simple as that! Of course, even those scant few lines can be condensed into an [anonymous function](https://robkendal.co.uk/arrow-functions-in-javascript/) (really, an example of an [Immediately Invoked Function Expression](https://blog.mgechev.com/2012/08/29/self-invoking-functions-in-javascript-or-immediately-invoked-function-expression/) or IIFE) to create an even cleaner, terser end result:
 
     (context => {\n // need to clear out the current element's contents (just in case!)\n output.innerHTML = '';\n\n // now, load up the html fragments and add them to the page\n context.keys().forEach(key => output.innerHTML += context(key));\n})(require.context('./fragments', false, /.html$/));\n
 
