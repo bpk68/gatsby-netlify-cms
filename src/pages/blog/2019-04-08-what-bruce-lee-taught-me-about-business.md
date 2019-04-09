@@ -8,7 +8,9 @@ description: >-
 tags:
   - Thoughts
 ---
-This is a [shameless replication of my own article](\"https://www.linkedin.com/pulse/what-bruce-lee-taught-me-business-robert-kendal/\") with the same name from [LinkedIn](\"https://www.linkedin.com/in/robkendal/\"), but here we are.
+![Bruce Lee statue in Hong Kong](/img/bruce-lee-statue.jpg)
+
+This is a [shameless replication of my own article]("https://www.linkedin.com/pulse/what-bruce-lee-taught-me-business-robert-kendal/") with the same name from [LinkedIn]("https://www.linkedin.com/in/robkendal/"), but here we are.
 
 I've been an avid fan of martial arts since I was in my early double digits. I studied karate, taekwondo, kung foo and settled on ju jitsu as my primary passion. After a few years of training, I gained my shodan, the much coveted black belt.
 
@@ -38,17 +40,17 @@ Starting and running a business is not quite as fairytale as some would have you
 
 But business is about more than knowing the numbers, doing the research, networking, sales, marketing, or even having a great idea. All of those things are important, vital even, but you'll find that the most successful people have a number of key qualities they all share:
 
-*   Discipline
-*   Focus
-*   Positive attitude
-*   Self-confidence
-*   Attention to detail
-*   Humility
-*   Compassion
-*   Generosity
-*   Belief in the power of knowledge
-*   Resilience
-*   Strength - mentally and physically
+* Discipline
+* Focus
+* Positive attitude
+* Self-confidence
+* Attention to detail
+* Humility
+* Compassion
+* Generosity
+* Belief in the power of knowledge
+* Resilience
+* Strength - mentally and physically
 
 And, wouldn't you know it, these are all qualities that you can gain from studying martial arts. I wasn't genetically gifted, more or less talented than anyone else in my classes, but I managed to achieve what others hadn't. This was simply due to consistency and relentlessness.
 
