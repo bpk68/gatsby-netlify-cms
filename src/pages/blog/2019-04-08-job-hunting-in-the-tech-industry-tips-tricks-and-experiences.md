@@ -8,15 +8,17 @@ description: >-
 tags:
   - Thoughts
 ---
-Having recently been through the job hunting mill, I find that familiar lines of conversation crop up time and again between colleagues, friends and fellow tech people on [Twitter](\"https://twitter.com/kendalmintcode\") about how to find a job, how you deal with issue 'xyz' and fight the dreaded imposter syndrome and inferiority complexes.
+![Typewriter and stationery](/img/rawpixel-604746-unsplash.jpg)
+
+Having recently been through the job hunting mill, I find that familiar lines of conversation crop up time and again between colleagues, friends and fellow tech people on [Twitter]("https://twitter.com/kendalmintcode") about how to find a job, how you deal with issue 'xyz' and fight the dreaded imposter syndrome and inferiority complexes.
 
 So here is my experience of what worked for _me_ distilled into some top tips...
 
 ### Have a system
 
-I'm in [ISTJ personality type](\"https://en.wikipedia.org/wiki/ISTJ\") so I like lists and charts and data. You might not, but it helped me immensely to have a system, even one of my own invention, in place to keep track of what I'd applied for, what stage I was in, where I'd had feedback or things had gone a little quiet.
+I'm in [ISTJ personality type]("https://en.wikipedia.org/wiki/ISTJ") so I like lists and charts and data. You might not, but it helped me immensely to have a system, even one of my own invention, in place to keep track of what I'd applied for, what stage I was in, where I'd had feedback or things had gone a little quiet.
 
-I found [Trello](\"https://trello.com/\") a great fit for this as it let me sort of kanban the process, right from initial application through to first or second stage interview, tech-test timings and overall progress. I could also track those pesky applications where you hear nothing for a few weeks (are they still ongoing, have you exited without being told, what's going on...?).
+I found [Trello]("https://trello.com/") a great fit for this as it let me sort of kanban the process, right from initial application through to first or second stage interview, tech-test timings and overall progress. I could also track those pesky applications where you hear nothing for a few weeks (are they still ongoing, have you exited without being told, what's going on...?).
 
 You might have something completely different that works for you, but without something, _anything_ in place to navigate the endless emails, phone calls, people involved (recruiters, hiring teams, key team members, and the rest), you can easily lose track of your place in the process.
 
@@ -28,18 +30,16 @@ There are a lot of ways to feel like you're just not good enough. But I'm here t
 
 It's all about mindset. Yours needs to be set to 'growth'!
 
-![](\"/content/images/2018/12/mindset-table.png\")
+![Fixed vs. growth mindset diagram](/img/mindset-table.png "Credit: image from Train Ugly (https://trainugly.com/mindset-makers-breakers-pt1/)")
 
-_(Image from [**Train Ugly**](\"https://trainugly.com/mindset-makers-breakers-pt1/\"))_
-
-Having a [growth mindset](\"https://www.mindsetworks.com/science/\") is becoming more and more popular. Essentially it's about flipping your thought patterns and approach in order to learn, improve, and grow; **looking to fill the gaps rather than dwelling on the fact that the gaps exist** - as Homer Simpson would say, 'Crisitunity!'.
+Having a [growth mindset]("https://www.mindsetworks.com/science/") is becoming more and more popular. Essentially it's about flipping your thought patterns and approach in order to learn, improve, and grow; **looking to fill the gaps rather than dwelling on the fact that the gaps exist** - as Homer Simpson would say, 'Crisitunity!'.
 
 When it comes to job hunting, a few helpful mindset shifts might look like this:
 
-*   I'm not qualified for the job > _I'll be honest about my experience and let them decide!_
-*   I didn't even get an interview > _what can I do differently next time?_
-*   I don't know half of those technologies > _I'd love the chance to learn new skills!_
-*   They turned me down for the role > _I wasn't the right fit this time._
+* I'm not qualified for the job > _I'll be honest about my experience and let them decide!_
+* I didn't even get an interview > _what can I do differently next time?_
+* I don't know half of those technologies > _I'd love the chance to learn new skills!_
+* They turned me down for the role > _I wasn't the right fit this time._
 
 ### Rejection != failure
 
