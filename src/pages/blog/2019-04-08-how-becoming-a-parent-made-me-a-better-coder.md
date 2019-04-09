@@ -8,6 +8,8 @@ description: >-
 tags:
   - Thoughts
 ---
+![Father and daughter drawing together](/img/girl-1641215_1920.jpg)
+
 Yes, yes I know, it's common to see people you know have a kid and then become one of those insufferable types who thinks they've unlocked some secret achievement that 'you wouldn't understand until you have a child yourself'. They start lecturing people and giving advice as if it's been passed on to them via a sage, mystical power.
 
 I'm not one of those. This isn't one of those lectures.
@@ -18,18 +20,15 @@ Nevertheless, having a child has made me a much better husband, person, colleagu
 
 I came across this term on a poster in a school visit. It was a comparative list with a very negative set of outlooks on one side and a more 'growth-minded' set on the other. Obviously aimed more at the primary school's level, examples included:
 
-*   I can't do this (_negative_) | what else can I try? (_growth_)
-*   I've tried everything (_negative_) | what am I missing? (_growth_)
-*   My friend's always doing well (_negative_) | what can I learn from them? (_growth_)
+* I can't do this (_negative_) | what else can I try? (_growth_)
+* I've tried everything (_negative_) | what am I missing? (_growth_)
+* My friend's always doing well (_negative_) | what can I learn from them? (_growth_)
 
-It's inevitable as a developer that you will hit some kind of wall; whether it's something new that you don't fully grasp yet (_cough_ [Redux](\"https://redux.js.org/\")) or a difficult challenge to solve using JavaScript. And, when you hit these walls, it's easy to feel overwhelmed, or not good enough, or just stuck.
+It's inevitable as a developer that you will hit some kind of wall; whether it's something new that you don't fully grasp yet (_cough_ [Redux]("https://redux.js.org/")) or a difficult challenge to solve using JavaScript. And, when you hit these walls, it's easy to feel overwhelmed, or not good enough, or just stuck.
 
-![](\"https://robkendal.co.uk/content/images/2018/11/growth-mindset-examples.png\")
+![Fixed mindset vs. growth mindset](/img/growth-mindset-examples.png "Fixed mindset vs. growth mindset. (credit: https://www.big-change.org/)")
 
-Fixed mindset vs. growth mindset. _(credit: https://www.big-change.org/)_
-
-  
-By shifting my thinking, by applying these sorts of [positive repurposing of dead-end mental pathways](\"https://www.mindsetworks.com/science/\") has helped me rebound and hit my goals, especially when it comes to overcoming challenges at work.
+By shifting my thinking, by applying these sorts of [positive repurposing of dead-end mental pathways]("https://www.mindsetworks.com/science/") has helped me rebound and hit my goals, especially when it comes to overcoming challenges at work.
 
 As a bonus, because of the repetitive and objective nature of training this mindset into your little one (i.e. another human), it becomes easier to help motivate your colleagues into action - **Pro tip**: baby voices work less on your colleages!
 
@@ -65,18 +64,15 @@ With the child, last minute curve balls are always coming up and you have to dea
 
 Relating to developing the webs, over the course of my career I've discovered that this approach of deciding on a direction and setting sail, adjusting course as you go is far more rewarding than drowning in plans.
 
-![](\"https://robkendal.co.uk/content/images/2018/11/agile-graphic.jpg\")
+![The Agile development process. (credit: https://www.axian.com)](/img/agile-graphic.jpg "The Agile development process. (credit: https://www.axian.com)")
 
-The Agile development process. _(credit: https://www.axian.com)_
-
-  
 This is one of the overall themes of using Agile. Yes, I know, it's not as simple as that and there are definitely planning stages involved, but the general approach is to define a set of actions and work on them to deliver a feature or function in short, iterative timeframes.
 
 Focusing on action over (too much) planing helps in a number of ways:
 
-*   you can ship features and deliverables sooner
-*   shipping early(ier) means you can get feedback and real-world metrics sooner to inform direction and improvements
-*   changes in scope or direction are less jarring and cause fewer problems
+* you can ship features and deliverables sooner
+* shipping early(ier) means you can get feedback and real-world metrics sooner to inform direction and improvements
+* changes in scope or direction are less jarring and cause fewer problems
 
 Of course, there are situations where people's lives depend on getting it right first time so this isn't great advice for everything. However, when it comes to most situations, especially software development, I firmly believe in action above the quagmire of over planning.
 
