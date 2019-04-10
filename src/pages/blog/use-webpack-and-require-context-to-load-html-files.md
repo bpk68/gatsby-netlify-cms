@@ -47,12 +47,12 @@ Well, there isn't one really. There are lots of solutions involving `iframe` and
 There is a brilliant article by Eric Bidelman on [using HTML imports](https://www.html5rocks.com/en/tutorials/webcomponents/imports/). His method uses the current [Editor's Draft spec from W3C](https://w3c.github.io/webcomponents/spec/imports/) for the importing of HTML files using the `link` element in the head of a document as follows:
 
 ```markup
-<link rel="import" href="/path/to/awesome/file.html">\n
+<link rel="import" href="/path/to/awesome/file.html">
 ```
 
 From here, you can use some really simple JavaScript to grab the HTML content and load it onto the page:
 
-```markup
+```javascript
 const content = document.querySelector('link[rel="import"]');
 const outputElement = document.querySelector('#placeToShoveContent');
 
