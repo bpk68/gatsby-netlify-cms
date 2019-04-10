@@ -1,0 +1,63 @@
+.site-footer {
+  padding-bottom: 1.66667em;
+  padding-top: 1.66667em;
+}
+
+.site-footer-inside {
+  position: relative;
+}
+
+.site-info {
+  font-size: 11px;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.back-to-top {
+  margin: 1.66667em 0 0;
+  text-align: center;
+}
+
+
+/* Circle Buttons */
+.social-links a,
+.top-button {
+  background: $gray-lightest;
+  border-radius: 100%;
+  color: $gray-dark;
+  display: inline-block;
+  //font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+  position: relative;
+  text-align: center;
+  -webkit-transition: .3s;
+  transition: .3s;
+  width: 40px;
+}
+
+
+.social-links a:hover,
+.top-button:hover {
+  background: $color-accent;
+  box-shadow: 0 0 1px 7px rgba($color-accent,.15);
+  color: #fff;
+}
+
+
+
+.site-footer .social-links {
+    -ms-flex-pack: start;
+    justify-content: normal;
+    padding-right: 70px;
+}
+
+.social-links + .site-info + .back-to-top {
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}

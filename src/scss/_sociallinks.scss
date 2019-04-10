@@ -1,0 +1,28 @@
+/* Social Links */
+.social-links {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.social-links a {
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 5px 0.5em;
+}
+
+.social-links svg {
+  fill: currentColor;
+  height: 18px;
+}

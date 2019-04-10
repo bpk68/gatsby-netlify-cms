@@ -350,3 +350,23 @@ object,
 video {
   max-width: 100%;
 }
+
+
+
+/* Text meant only for screen readers */
+.screen-reader-text,
+.site-logo + .site-title {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+}
+
+
+.outer {
+  padding-left: 30px;
+  padding-right: 30px;
+}
