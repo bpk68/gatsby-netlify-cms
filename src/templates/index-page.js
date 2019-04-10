@@ -5,64 +5,41 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 //import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
+import SocialLinks from '../components/SocialLinks';
 
 export const IndexPageTemplate = ({
   image,
+  avatarimage,
   title,
   heading,
   subheading,
   description,
   intro,
 }) => (
-    <div>
-      <div
-        className="full-width-image margin-top-0"
+    <>
+      <section
+        className="hero is-primary is-medium has-text-dark"
         style={{
           backgroundImage: `url(${
             !!image.childImageSharp ? image.childImageSharp.fluid.src : image
             })`,
           backgroundPosition: `top center`,
           backgroundAttachment: `fixed`,
-        }}
-      >
-        <div
-          style={{
-            display: 'flex',
-            height: '150px',
-            lineHeight: '1',
-            justifyContent: 'space-around',
-            alignItems: 'left',
-            flexDirection: 'column',
-          }}
-        >
-          <h1
-            className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-            style={{
-              boxShadow:
-                'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-              backgroundColor: 'rgb(255, 68, 0)',
-              color: 'white',
-              lineHeight: '1',
-              padding: '0.25em',
-            }}
-          >
-            {title}
-          </h1>
-          <h3
-            className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-            style={{
-              boxShadow:
-                'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-              backgroundColor: 'rgb(255, 68, 0)',
-              color: 'white',
-              lineHeight: '1',
-              padding: '0.25em',
-            }}
-          >
-            {subheading}
-          </h3>
+        }}>
+        <div className="hero-body has-text-centered">
+          <div className="container">
+            <p className="hero-avatar">
+              <img src={!!avatarimage.childImageSharp ? avatarimage.childImageSharp.fluid.src : avatarimage} className="avatar" alt="Rob Kendal" />
+            </p>
+            <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet">
+              {title}
+            </h1>
+            <p>{subheading}</p>
+            <SocialLinks />
+          </div>
         </div>
-      </div>
+      </section>
+
       <section className="section section--gradient">
         <div className="container">
           <div className="section">
@@ -97,11 +74,12 @@ export const IndexPageTemplate = ({
           </div>
         </div>
       </section>
-    </div>
+    </>
   )
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  avatarimage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
@@ -119,6 +97,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <IndexPageTemplate
         image={frontmatter.image}
+        avatarimage={frontmatter.avatarimage}
         title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
@@ -147,6 +126,13 @@ export const pageQuery = graphql`
         image {
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        avatarimage {
+           childImageSharp {
+            fluid(maxWidth: 300, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
