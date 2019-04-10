@@ -1,12 +1,13 @@
 ---
 templateKey: index-page
-title: Great coffee with a conscience
-image: /img/bg1.jpg
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+title: Rob Kendal; front end developer
+image: /img/trianglify.png
+avatarimage: /img/38687284.jpg
+heading: Rob Kendal; front-end developer
+subheading: My name is Rob Kendal. I'm a front-end developer and award-winning marketer, based in beautiful Yorkshire. Welcome to the mind-meld.
 description: This is the website of Rob Kendal
 intro:
-  heading: Great coffee with no compromises
+  heading: Rob Kendal; front end developer
   description: >
     We hold our coffee to the highest standards from the shrub to the cup.
     That’s why we’re meticulous and transparent about each step of the coffee’s
