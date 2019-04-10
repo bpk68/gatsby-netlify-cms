@@ -9,6 +9,9 @@ tags:
   - Development
   - JavaScript
 ---
+
+![Webpack starter kit diagram](/img/webpack-starter-kit-blog-header.png)
+
 I feel as if I've written a number of non-technical posts lately, mainly because I've had a lot of broader concepts floating around in my noggin. So if you're interested in article on [tech tests being relevant](https://robkendal.co.uk/are-tech-tests-still-relevant/), [continuous refactoring](https://robkendal.co.uk/continuous-refactoring-avoiding-technical-debt-in-the-here-and-now/) or whether you should [use nest stuff in your smart home](https://robkendal.co.uk/nest-smart-home-review/), you're all set.
 
 But let's not do that here. Here, I'm going to share with you my quick and simple [starter kit](https://github.com/bpk68/web-template) for [Webpack](https://webpack.js.org/) based projects.

@@ -11,6 +11,9 @@ tags:
   - JavaScript
   - Tutorials
 ---
+
+![Signposts in the sunshine](/img/deanna-ritchie-227649-unsplash_o-1.jpg)
+
 Following on from my recent article on [how to build a Node JS API server that uses JSON files](https://robkendal.co.uk/build-a-restful-node-api-server-using-json-files/), I wanted to share another recent experience I had: **using CSS custom properties to apply a custom theme** to a React website.
 
 Let's get to it!
@@ -36,9 +39,19 @@ For example, this means that we could have a custom property, say `--special-bac
 
 You might see them in use like this:
 
-    :root {\n    --hero-bg-color: yellow;\n    --heading-font-size: 1.5rem;\n }\n \n /* ...other styles */\n \n .hero {\n     background-color: var(--hero-bg-color); \n     /* this is evaluated to: background-color: yellow */\n }
-
-\\n
+```css
+:root {
+    --hero-bg-color: yellow;
+    --heading-font-size: 1.5rem;
+ }
+ 
+ /* ...other styles */
+ 
+ .hero {
+     background-color: var(--hero-bg-color); 
+     /* this is evaluated to: background-color: yellow */
+ }
+```
 
 In the Smashing book (and his website), Mike explains in great detail about the in's and out's of CSS custom properties, why, when and how to use them, as well as some common pitfalls and approaches.
 
@@ -61,14 +74,23 @@ The thinking (and the process) of how a custom property theming mechanism could 
 
 Let's work through the steps and build up a dynamically loaded theme for ourselves.
 
-Building a custom theme machine
+<a name="building-a-custom-theme-machine"></a>Building a custom theme machine
 -------------------------------
 
 For those eager beavers among you, [head over to the finished project](https://codesandbox.io/embed/5z6yjrpr84) to see what we're building. I'm using [CodeSandbox.io](https://codesandbox.io/) to host the files which in turn uses the impressive [Parcel](https://parceljs.org/getting_started.html) for bundling (PS - I'm switching my projects to Parcel from Webpack in the future and will be creating a Parcel Start Kit to match my Webpack Starter Kit).
 
 For starters, our file structure is quite simple:
 
-    /src\n    /data\n        --theme.json\n    /helpers\n        --themeBuilder.js\n    --index.js\n    --theme.css\nindex.html
+```
+/src
+    /data
+        --theme.json
+    /helpers
+        --themeBuilder.js
+    --index.js
+    --theme.css
+index.html
+```
 
 Nothing too complex here, but each file plays a part:
 
@@ -82,27 +104,59 @@ Nothing too complex here, but each file plays a part:
 
 If you open up the `index.html` file, you'll notice a couple of things. Firstly we're pulling in the fantastic [Bulma CSS framework](https://bulma.io/documentation/) in the head using this line:
 
-     <!-- grab the Bulma library (for some good base styles) -->\n    <link\n      rel="stylesheet"\n      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"\n    />\n
-
-\\n
+```markup
+<!-- grab the Bulma library (for some good base styles) -->
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"
+/>
+```
 
 Next, we have a really simple content structure that shows off a couple of styles that we can customise:
 
-    <main class="custom-theme">\n      <section class="hero is-fullheight">\n        <div class="hero-body">\n          <div class="container">\n            <div class="content notification">\n              <h1 class="title">What an interesting title</h1>\n              <p>\n                Integer sollicitudin, tortor a mattis commodo, velit urna\n                rhoncus erat, vitae congue lectus dolor consequat libero. Donec\n                leo ligula, maximus et pellentesque sed, gravida a metus. Cras\n                ullamcorper a nunc ac porta.\n              </p>\n              <button class="button">Make exciting things happen</button>\n            </div>\n          </div>\n        </div>\n      </section>\n    </main>\n
-
-\\n
+```markup
+<main class="custom-theme">
+    <section class="hero is-fullheight">
+    <div class="hero-body">
+        <div class="container">
+        <div class="content notification">
+            <h1 class="title">What an interesting title</h1>
+            <p>
+            Integer sollicitudin, tortor a mattis commodo, velit urna
+            rhoncus erat, vitae congue lectus dolor consequat libero. Donec
+            leo ligula, maximus et pellentesque sed, gravida a metus. Cras
+            ullamcorper a nunc ac porta.
+            </p>
+            <button class="button">Make exciting things happen</button>
+        </div>
+        </div>
+    </div>
+    </section>
+</main>
+```
 
 Notice the `custom-theme` class that everything is wrapped in. This will allow us to contain the scope of our theme (and associated CSS custom properties) to a particular slice of our content.
 
 Our base set of styles look like this:
 
-    .custom-theme {\n  --hero-bg-color: #00d1b2;\n  --notification-bg-color: #363636;\n  --content-color: #fff;\n  --button-bg-color: #3273dc;\n}\n\n.custom-theme .hero {\n  background-color: var(--hero-bg-color);\n}\n\n/* ...rest of file */\n
+```css
+.custom-theme {
+  --hero-bg-color: #00d1b2;
+  --notification-bg-color: #363636;
+  --content-color: #fff;
+  --button-bg-color: #3273dc;
+}
 
-\\n
+.custom-theme .hero {
+  background-color: var(--hero-bg-color);
+}
+
+/* ...rest of file */
+```
 
 Which gives us a lovely looking background with a content box like this:
 
-![](/content/images/2019/04/starting-point.png)
+![Our first screen styled up](/img/starting-point.png)
 
 Our starting page with base styles applied
 
@@ -110,25 +164,51 @@ Our starting page with base styles applied
 
 Now that we've got a solid base to customise, it's time we crafted a `.json` file full of overrides to our base styles. Looking at `/data/theme.json` you'll see the following:
 
-    {\n  "hero-bg-color": "#ffdd57",\n  "notification-bg-color": "#8187de",\n  "content-color": "#333",\n  "button-bg-color": "#cc1a9c"\n}\n
-
-\\n
+```json
+{
+  "hero-bg-color": "#ffdd57",
+  "notification-bg-color": "#8187de",
+  "content-color": "#333",
+  "button-bg-color": "#cc1a9c"
+}
+```
 
 _(I've chosen to name the variables the same as they appear in the ultimate CSS because this will make them easier to automate if our list grows later on. You can see how this might work a little bit later in the article.)_
 
 Inside our `index.js` file, we have a fairly straightforward couple of things going on. First up, we have a function to build a new style element and inject it into our document head:
 
-    // With help from David Walsh:\n// https://davidwalsh.name/add-rules-stylesheets\nconst buildStyleElement = () => {\n  const styleEl = document.createElement("style");\n\n  styleEl.appendChild(document.createTextNode(""));\n  document.head.appendChild(styleEl);\n\n  return styleEl.sheet;\n};\n
+```javascript
+// With help from David Walsh:
+// https://davidwalsh.name/add-rules-stylesheets
+const buildStyleElement = () => {
+  const styleEl = document.createElement("style");
 
-\\n
+  styleEl.appendChild(document.createTextNode(""));
+  document.head.appendChild(styleEl);
+
+  return styleEl.sheet;
+};
+```
 
 [David Walsh's helpful article](https://davidwalsh.name/add-rules-stylesheets) gives us some help to deal with a Webkit quirk here, but this function is quite simple: create a style element; add it to the document.head; finally, return the actual stylesheet so that we can add styles to this later on.
 
 Next, we have an `init()` function that kicks everything off:
 
-    const init = () => {\n  // load up our custom theme via some sort of async method (in real life)\n  // here, we'll simulate an ajax call\n  setTimeout(() => {\n    if (typeof CustomStyles !== "undefined") {\n      // successful 'ajax' call\n      const stylesheet = buildStyleElement();\n      const customStyleRules = CustomThemeBuilder(CustomStyles);\n\n      stylesheet.insertRule(customStyleRules);\n    }\n  }, 1500);\n};\n
+```javascript
+const init = () => {
+  // load up our custom theme via some sort of async method (in real life)
+  // here, we'll simulate an ajax call
+  setTimeout(() => {
+    if (typeof CustomStyles !== "undefined") {
+      // successful 'ajax' call
+      const stylesheet = buildStyleElement();
+      const customStyleRules = CustomThemeBuilder(CustomStyles);
 
-\\n
+      stylesheet.insertRule(customStyleRules);
+    }
+  }, 1500);
+};
+```
 
 Because this is an entirely self-contained project, we're not actually calling anything from an API. Instead, we're mocking the call, wait, response flow of an actual API call using the classic `setTimeout()` function built in to JS.
 
@@ -138,9 +218,36 @@ We check to see if our `CustomStyles` JSON (imported at the top of this file) is
 
 Now for the fun part, building the theme. Inside the `/helpers/themeBuilder.js` file, you'll find the main theme/style processor:
 
-    // our customTheme object (from the JSON) should be an object like this:\n// { "theme-property-name": "#abcdef" }\nconst ThemeBuilder = customTheme => {\n  // return if there's no custom theme available\n  if (typeof customTheme === 'undefined') {\n    return;\n  }\n\n  // gather our custom properties to insert into the stylesheet overrides\n  // we're using the ES6 backtick string notation here to keep things readable\n  const stylesToInsert = `\n .custom-theme {\n    ${insertPropertyIfValid("--hero-bg-color", customTheme["hero-bg-color"])};\n    ${insertPropertyIfValid(\n      "--notification-bg-color",\n      customTheme["notification-bg-color"]\n    )};\n    ${insertPropertyIfValid("--content-color", customTheme["content-color"])};\n    ${insertPropertyIfValid(\n      "--button-bg-color",\n      customTheme["button-bg-color"]\n    )};\n  }\n`;\n\n  // finally, send our styles back to the caller\n  return stylesToInsert;\n};\n
+```javascript
+// our customTheme object (from the JSON) should be an object like this:
+// { "theme-property-name": "#abcdef" }
+const ThemeBuilder = customTheme => {
+  // return if there's no custom theme available
+  if (typeof customTheme === 'undefined') {
+    return;
+  }
 
-\\n
+  // gather our custom properties to insert into the stylesheet overrides
+  // we're using the ES6 backtick string notation here to keep things readable
+  const stylesToInsert = `
+ .custom-theme {
+    ${insertPropertyIfValid("--hero-bg-color", customTheme["hero-bg-color"])};
+    ${insertPropertyIfValid(
+      "--notification-bg-color",
+      customTheme["notification-bg-color"]
+    )};
+    ${insertPropertyIfValid("--content-color", customTheme["content-color"])};
+    ${insertPropertyIfValid(
+      "--button-bg-color",
+      customTheme["button-bg-color"]
+    )};
+  }
+`;
+
+  // finally, send our styles back to the caller
+  return stylesToInsert;
+};
+```
 
 Nothing too fancy here, although you might not be familiar with the ES6 [template literal syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) (also called the backtick string notation or template strings). Whilst ultimately producing a string type, the backtick just allows us to write strings over many lines more easily than traditional JS string syntax. Additionally, we can include variables within those strings much neater than before using the `${myVariableHere}` phrase.
 
@@ -148,31 +255,33 @@ In the function, we build up a string from our custom properties by calling the 
 
 If it's all good, then it returns the CSS custom property in a stylesheet-friendly format:
 
-    return `${cssProperty}: ${customPropertyValue};`;\n// if passed values of '--hero-bg-color' and '#FDBB3D' as arguments\n// it will return the string '--hero-bg-color: #FDBB3D'\n
-
-\\n
+```javascript
+return `${cssProperty}: ${customPropertyValue};`;
+// if passed values of '--hero-bg-color' and '#FDBB3D' as arguments
+// it will return the string '--hero-bg-color: #FDBB3D'
+```
 
 ### 3- Apply the styles
 
 The last part is to apply our styles to the page. As `themeBuilder.js` returns us a nice CSS rule/selector with our overrides in place, this line in `index.js` adds them to the page:
 
-    stylesheet.insertRule(customStyleRules);\n
+```stylesheet.insertRule(customStyleRules);```
 
 We could have used the JS mechanism for this of course, which looks like this:
 
-    element.style.setProperty('--my-epic-var', someValue);\n
+```element.style.setProperty('--my-epic-var', someValue);```
 
 I feel this boils down to personal preference. Using the `setProperty()` method means styles will be applied one by one; using our style injection method means you get everything fired off at once. It also looks a little more readable (arguably) from a code point of view.
 
 So, here's our before...
 
-![](/content/images/2019/04/starting-point-1.png)
+![Starting point styled up](/img/starting-point-1.png)
 
 Base elements with no customisation
 
 And here's what you get (after about 1.5 seconds delay) when our customised styles are applied:
 
-![](/content/images/2019/04/styles-applied.png)
+![Our custom loaded styles](/img/styles-applied.png)
 
 Our same content with our custom client theme applied
 
@@ -185,14 +294,22 @@ If, however, this list started to grow, we would have to find a way to deal with
 
 But fear not, we can easily update our `themeBuilder.js` file to cope with a variable sized JSON list using a bit of code that could work like this:
 
-    let stylesToInsert = ".custom-theme {";\n  Object.keys(customTheme).forEach(key => {\n    const cssProperty = `--${key}`;\n    console.log(cssProperty);\n    stylesToAdd += insertPropertyIfValid(cssProperty, customTheme[key]);\n  });\n  stylesToAdd += "}";\n
-
-\\n
+```javascript
+let stylesToInsert = ".custom-theme {";
+  Object.keys(customTheme).forEach(key => {
+    const cssProperty = `--${key}`;
+    console.log(cssProperty);
+    stylesToAdd += insertPropertyIfValid(cssProperty, customTheme[key]);
+  });
+  stylesToAdd += "}";
+```
 
 **Note:** for this to work smoothly, we're assuming that the CSS custom properties in the JSON file(s) are named the same as they are in the final CSS files (or at least in a way that allows for easy manipulation in the JavaScript).
 
 Looking through the finished project
 ------------------------------------
+
+<iframe src="https://codesandbox.io/embed/5z6yjrpr84?fontsize=14" title="Theming with custom properties" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 Alternatives to theming with CSS custom properties
 --------------------------------------------------
