@@ -5,3 +5,8 @@
 [build.environment]
   YARN_VERSION = "1.9.4"
   YARN_FLAGS = "--no-ignore-optional"
+# [[redirects]]
+#   from = "http://sad-swirles-0ef4cc.netlify.com/*"
+#   to = "https://robkendal.co.uk/:splat"
+#   status = 301
+#   force = true
