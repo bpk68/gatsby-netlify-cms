@@ -1,6 +1,8 @@
 ---
 templateKey: 'blog-post'
 title: 'Design systems are important for rapid development [DRAFT]'
+#featuredimage: /img/
+featured: false
 date: 2017-01-04T15:04:10.000Z
 description: >-
   All about design systems

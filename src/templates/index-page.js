@@ -28,14 +28,18 @@ export const IndexPageTemplate = ({
         }}>
         <div className="hero-body has-text-centered">
           <div className="container">
-            <p className="hero-avatar">
-              <img src={!!avatarimage.childImageSharp ? avatarimage.childImageSharp.fluid.src : avatarimage} className="avatar" alt="Rob Kendal" />
-            </p>
-            <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet">
-              {title}
-            </h1>
-            <p>{subheading}</p>
-            <SocialLinks />
+            <div className="columns">
+              <div className="column is-three-fifths is-offset-one-fifth">
+                <p className="hero-avatar">
+                  <img src={!!avatarimage.childImageSharp ? avatarimage.childImageSharp.fluid.src : avatarimage} className="avatar" alt="Rob Kendal" />
+                </p>
+                <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet">
+                  {title}
+                </h1>
+                <p>{subheading}</p>
+                <SocialLinks />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -49,23 +53,27 @@ export const IndexPageTemplate = ({
                   <div className="columns">
                     <div className="column is-12">
                       <h3 className="has-text-weight-semibold is-size-2">
-                        {heading}
+                        {intro.heading}
                       </h3>
-                      <p>{description}</p>
+                      <p dangerouslySetInnerHTML={
+                        { __html: intro.description }
+                      }></p>
                     </div>
                   </div>
 
                   {/* <Features gridItems={intro.blurbs} /> */}
 
                   <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      Latest stories
-                  </h3>
+                    <hr />
+                    <p className="subtitle is-size-3">
+                      Latest articles
+                    </p>
+                    <p>&nbsp;</p>
                     <BlogRoll />
                     <div className="column is-12 has-text-centered">
-                      <Link className="btn" to="/blog">
+                      <Link className="button is-dark" to="/blog">
                         Read more
-                    </Link>
+                      </Link>
                     </div>
                   </div>
                 </div>

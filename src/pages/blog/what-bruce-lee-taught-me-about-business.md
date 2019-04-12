@@ -1,6 +1,8 @@
 ---
 templateKey: blog-post
 title: What Bruce Lee taught me about business
+featuredimage: /img/bruce-lee-statue.jpg
+featured: false
 date: 2018-11-14T11:01:15.566Z
 description: >-
   Ever wondered how martial arts could help you start a business, become better

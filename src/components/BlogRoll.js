@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { kebabCase } from 'lodash'
 import { Link, graphql, StaticQuery } from 'gatsby'
+import Img from 'gatsby-image';
 
 class BlogRoll extends React.Component {
   render() {
@@ -8,33 +10,90 @@ class BlogRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="columns is-multiline">
+      <div className="post-feed">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
-              <article className="tile is-child box notification">
-                <p>
-                  <Link
-                    className="title has-text-primary is-size-4"
-                    to={post.fields.slug}
-                  >
-                    {post.frontmatter.title}
-                  </Link>
-                  <span> &bull; </span>
-                  <span className="subtitle is-size-5 is-block">
-                    {post.frontmatter.date}
-                  </span>
-                </p>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
-              </article>
-            </div>
+
+            <article className={`blog-post ${post.frontmatter.featured ? 'featured' : 'media'}`}>
+              {
+                !post.frontmatter.featured ?
+                  <figure className="media-left">
+                    <Link className="post-thumbnail" to={post.fields.slug}>
+                      <Img
+                        fluid={post.frontmatter.featuredimage.childImageSharp.fluid}
+                        fadeIn={true}
+                        alt="blog post thumbnail"
+                      />
+                    </Link>
+                  </figure>
+                  : ''
+              }
+              <div className="media-content">
+                <div className="post-meta">
+                  <p className="subtitle is-size-6 is-block is-uppercase has-text-grey-light">
+                    <time className="published" datetime={post.frontmatter.date}>
+                      {
+                        post.frontmatter.featured ?
+                          <span className="has-text-primary">Featured / </span>
+                          : ''
+                      }
+                      {post.frontmatter.date}
+                    </time>
+                  </p>
+                  <h2 className={`post-title title ${post.frontmatter.featured ? 'is-size-2' : 'is-size-4'}`}>
+                    <Link to={post.fields.slug}>
+                      {post.frontmatter.title}
+                    </Link>
+                  </h2>
+                </div>
+                <div className="post-content">
+                  {
+                    post.frontmatter.featured ?
+                      <figure className="media-left">
+                        <Link className="post-thumbnail" to={post.fields.slug}>
+                          <Img
+                            fluid={post.frontmatter.featuredimage.childImageSharp.fluid}
+                            fadeIn={true}
+                            alt="blog post thumbnail"
+                          />
+                        </Link>
+                      </figure>
+                      : ''
+                  }
+                  <p>
+                    {
+                      post.frontmatter.description ?
+                        post.frontmatter.description
+                        : post.excerpt
+                    }
+                  </p>
+                  <p className="post-tags tags">
+                    {
+                      post.frontmatter.tags.map(tag => (
+                        <Link
+                          key={tag + `tag`}
+                          to={`/tags/${kebabCase(tag)}/`}
+                          className="tag is-white has-text-primary is-rounded">
+                          #{tag}
+                        </Link>
+                      ))
+                    }
+                  </p>
+                  {
+                    post.frontmatter.featured ?
+                      <p className="read-more">
+                        <Link
+                          to={post.fields.slug}
+                          className="button is-primary is-rounded"
+                        >
+                          Continue Reading
+                      </Link>
+                      </p>
+                      : ''
+                  }
+                </div>
+              </div>
+            </article>
           ))}
       </div>
     )
@@ -64,7 +123,7 @@ export default () => (
         ) {
           edges {
             node {
-              excerpt(pruneLength: 400)
+              excerpt(pruneLength: 200)
               id
               fields {
                 slug
@@ -72,8 +131,18 @@ export default () => (
               frontmatter {
                 title
                 templateKey
-                date(formatString: "MMMM DD, YYYY")
-              }
+                description
+                featured
+                date(formatString: "DD MMMM, YYYY")
+                tags
+                featuredimage {
+                  childImageSharp {
+                    fluid(maxWidth: 900, quality: 100) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
+              }  
             }
           }
         }

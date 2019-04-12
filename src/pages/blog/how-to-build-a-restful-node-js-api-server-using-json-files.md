@@ -1,6 +1,8 @@
 ---
 templateKey: blog-post
 title: How to build a RESTful Node.js API server using JSON files
+featuredimage: /img/nodejs-new-pantone-black_o-1.png
+featured: true
 date: 2019-03-22T09:38:49.729Z
 description: >-
   There are lots of articles on how to build a Node API server but they're

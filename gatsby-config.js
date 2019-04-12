@@ -2,9 +2,9 @@ var proxy = require("http-proxy-middleware")
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'Kendal Mint Code - Rob Kendal, front-end developer and marketer',
     description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+      'I\'m Rob Kendal, an award- winning marketer and front- end developer(and, occasionally a guitarist) living in the beautiful Yorkshire countryside and working for the University of York.',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

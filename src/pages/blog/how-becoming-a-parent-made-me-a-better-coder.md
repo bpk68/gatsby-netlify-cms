@@ -1,6 +1,8 @@
 ---
 templateKey: blog-post
 title: How becoming a parent made me a better coder
+featuredimage: /img/girl-1641215_1920.jpg
+featured: false
 date: 2018-11-09T09:27:00.000Z
 description: >-
   Having a child has made me think about how I could use some of my new found

@@ -1,6 +1,8 @@
 ---
 templateKey: blog-post
 title: Why is CSS-in-JS a bad (or good) idea?
+featuredimage: /img/greg-rakozy-129733-unsplash.jpg
+featured: false
 date: 2018-12-19T14:08:05.726Z
 description: >-
   CSS-in-JS is demonised and heralded on social media, but is CSS-in-JS really

@@ -1,6 +1,8 @@
 ---
 templateKey: blog-post
 title: Quick-start JavaScript projects with this Webpack project starter kit
+featuredimage: /img/webpack-starter-kit-blog-header.png
+featured: false
 date: 2019-02-13T09:26:05.091Z
 description: >-
   Use my free, tried-and-tested Webpack project starter kit if you'd like to get

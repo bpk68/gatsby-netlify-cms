@@ -1,6 +1,8 @@
 ---
 templateKey: blog-post
 title: 'Job hunting in the tech industry: tips, tricks and experiences'
+featuredimage: /img/rawpixel-604746-unsplash.jpg
+featured: false
 date: 2018-12-18T09:01:15.566Z
 description: >-
   Fighting imposter syndome and other tips and tricks from a job hunting journey

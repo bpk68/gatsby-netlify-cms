@@ -1,6 +1,8 @@
 ---
 templateKey: blog-post
 title: Using CSS custom properties to apply themes in JavaScript or React
+featuredimage: /img/deanna-ritchie-227649-unsplash_o-1.jpg
+featured: true
 date: 2019-04-01T07:40:12.197Z
 description: >-
   Following on from my recent article on how to build a Node JS API server that

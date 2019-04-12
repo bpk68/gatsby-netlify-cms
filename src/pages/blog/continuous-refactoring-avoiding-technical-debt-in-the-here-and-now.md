@@ -1,6 +1,8 @@
 ---
 templateKey: blog-post
 title: 'Continuous refactoring: avoiding technical debt in the here and now'
+featuredimage: /img/rawpixel-783429-unsplash_o-1.jpg
+featured: false
 date: 2019-02-01T13:26:22.510Z
 description: >-
   How do you find time to refactor your code? The answer is simple: continuous

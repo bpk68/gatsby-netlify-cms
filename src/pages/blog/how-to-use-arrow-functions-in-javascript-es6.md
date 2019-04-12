@@ -1,6 +1,8 @@
 ---
 templateKey: blog-post
 title: How to use arrow functions in JavaScript ES6
+featuredimage: /img/dlanor-s-703975-unsplash.jpg
+featured: false
 date: 2019-01-02T10:10:30.008Z
 description: >-
   Let's look at arrow functions in the ES6 version of JavaScript. Learn what

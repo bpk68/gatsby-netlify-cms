@@ -34,7 +34,7 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <nav
-        className="navbar is-light"
+        className="navbar is-white"
         role="navigation"
         aria-label="main-navigation"
       >
@@ -72,13 +72,11 @@ const Navbar = class extends React.Component {
             <div className="navbar-end has-text-centered">
               {/* <a
                 className="navbar-item"
-                href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate"
+                href="https://mentors.codingcoach.io/?country=GB"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
+                <img src="/img/coding-coach_png.png" alt="Coding Coach Mentor" />
               </a> */}
             </div>
           </div>

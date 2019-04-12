@@ -1,6 +1,8 @@
 ---
 templateKey: blog-post
 title: Reading Google Sheets data using JavaScript with Google Sheets Reader
+featuredimage: /img/mika-baumeister-703680-unsplash.jpg
+featured: false
 date: 2019-01-10T14:17:09.678Z
 description: >-
   How can I access Google Sheet spreadsheets with JavaScript? I'll walk you

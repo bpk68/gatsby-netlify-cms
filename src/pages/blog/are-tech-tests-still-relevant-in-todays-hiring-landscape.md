@@ -1,6 +1,8 @@
 ---
 templateKey: blog-post
 title: Are tech tests still relevant in today's hiring landscape?
+featured: false
+featuredimage: /img/nathan-dumlao-572049-unsplash.jpg
 date: 2019-02-05T15:30:32.539Z
 description: >-
   After applying for development jobs, I've been thinking a lot about how

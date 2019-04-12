@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import AboutSnippet from '../components/AboutSnippet';
 
 export const BlogPostTemplate = ({
   content,
@@ -28,17 +29,23 @@ export const BlogPostTemplate = ({
             <p>{description}</p>
             <PostContent content={content} />
             {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <p className="post-tags tags">
+                {
+                  tags.map(tag => (
+                    <Link
+                      key={tag + `tag`}
+                      to={`/tags/${kebabCase(tag)}/`}
+                      className="tag is-white has-text-primary is-rounded">
+                      #{tag}
+                    </Link>
+                  ))
+                }
+              </p>
             ) : null}
+
+            {/* TODO: social sharing buttons! */}
+
+            <AboutSnippet />
           </div>
         </div>
       </div>
@@ -63,6 +70,7 @@ const BlogPost = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
+        featuredImage={post.frontmatter.featuredimage}
         helmet={
           <Helmet titleTemplate="%s | Blog">
             <title>{`${post.frontmatter.title}`}</title>
@@ -93,9 +101,17 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "DD MMMM, YYYY")
         title
         description
+        featured
+        featuredimage {
+          childImageSharp {
+            fluid(maxWidth: 900, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         tags
       }
     }

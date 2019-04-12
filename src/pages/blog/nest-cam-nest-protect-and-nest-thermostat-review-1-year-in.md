@@ -1,6 +1,8 @@
 ---
 templateKey: blog-post
 title: 'Nest cam, nest protect and nest thermostat review - 1 year in'
+featuredimage: /img/dan-lefebvre-1237717-unsplash.jpg
+featured: false
 date: 2019-01-29T14:21:20.984Z
 description: >-
   After living with the nest ecosystem for over a year, I review the nest
