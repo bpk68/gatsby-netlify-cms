@@ -8,9 +8,11 @@ import './all.sass';
 import '../scss/styles.scss';
 
 import useSiteMetadata from './SiteMetadata'
+import { CommentsLoader } from './CommentsSnippet';
 
 const TemplateWrapper = ({ children }) => {
-  const { title, description } = useSiteMetadata()
+  const { title, description } = useSiteMetadata();
+
   return (
     <div>
       <Helmet>
@@ -35,28 +37,41 @@ const TemplateWrapper = ({ children }) => {
         <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i" rel="stylesheet" />
         <meta name="theme-color" content="#fff" />
 
-        <meta property="og:type" content="business.business" />
+        <meta property="og:site_name" content="Kendal Mint Code" />
+        <meta property="og:type" content="article" />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
-        <meta property="og:image" content="/img/og-image.jpg" />
+        <meta property="og:image" content="/img/logo.png" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:label1" content="Written by" />
+        <meta name="twitter:data1" content="Rob Kendal" />
+        <meta name="twitter:site" content="@kendalmintcode" />
+        <meta name="twitter:creator" content="@kendalmintcode" />
 
         <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105680907-5"></script>
-        <script
+        <script async
           dangerouslySetInnerHTML={{
             __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
 
-          gtag('config', 'UA-105680907-5');
-      `,
+              gtag('config', 'UA-105680907-5');
+            `,
           }}
         />
       </Helmet>
       <Navbar />
       <div>{children}</div>
       <Footer />
+
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `window.addEventListener('DOMContentLoaded', () => ${CommentsLoader()});`
+        }}
+      />
 
       <script id="dsq-count-scr" src="//robkendal.disqus.com/count.js" async></script>
     </div>

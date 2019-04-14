@@ -4,19 +4,63 @@ import { kebabCase } from 'lodash'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import Img from 'gatsby-image';
 
+
+
+const getRelatedPosts = (arrayToQuery, count) => {
+  // Make a copy of the array
+  const tmp = arrayToQuery.slice(arrayToQuery);
+  let ret = [];
+
+  for (var i = 0; i < count; i++) {
+    const index = Math.floor(Math.random() * tmp.length);
+    const removed = tmp.splice(index, 1);
+    // Since we are only removing one element
+    ret.push(removed[0]);
+  }
+  return ret;
+}
+
+
+
 class BlogRoll extends React.Component {
   render() {
-    const { data } = this.props
+    const { data, relatedTags, excludePostId } = this.props
     const { edges: posts } = data.allMarkdownRemark
+    let filteredPosts = posts;
+    let relatedPosts = false;
+
+    // related posts filtering
+    if (relatedTags && relatedTags.length) {
+      filteredPosts = posts.filter(post => {
+        if (post.node.id === excludePostId) {
+          return false;
+        }
+        if (post.node.frontmatter.tags && post.node.frontmatter.tags.length) {
+          return relatedTags.filter(relatedTag => post.node.frontmatter.tags.includes(relatedTag)).length > 0;
+        }
+
+        return false;
+      });
+
+      filteredPosts = getRelatedPosts(filteredPosts, 3);
+      relatedPosts = true;
+    }
 
     return (
-      <div className="post-feed">
-        {posts &&
-          posts.map(({ node: post }) => (
+      <div className={`post-feed ${relatedPosts ? 'related-posts' : ''}`}>
+        {
+          console.log(relatedPosts !== true)
+        }
+        {filteredPosts &&
+          filteredPosts.map(({ node: post }) => (
 
-            <article className={`blog-post ${post.frontmatter.featured ? 'featured' : 'media'}`}>
+
+            <article
+              key={`post-${post.id}`}
+              className={`blog-post ${post.frontmatter.featured && !relatedPosts ? 'featured' : 'media'}`}
+            >
               {
-                !post.frontmatter.featured ?
+                !post.frontmatter.featured || relatedPosts ?
                   <figure className="media-left">
                     <Link className="post-thumbnail" to={post.fields.slug}>
                       <Img
@@ -31,7 +75,7 @@ class BlogRoll extends React.Component {
               <div className="media-content">
                 <div className="post-meta">
                   <p className="subtitle is-size-6 is-block is-uppercase has-text-grey-light">
-                    <time className="published" datetime={post.frontmatter.date}>
+                    <time className="published" dateTime={post.frontmatter.date}>
                       {
                         post.frontmatter.featured ?
                           <span className="has-text-primary">Featured / </span>
@@ -40,7 +84,7 @@ class BlogRoll extends React.Component {
                       {post.frontmatter.date}
                     </time>
                   </p>
-                  <h2 className={`post-title title ${post.frontmatter.featured ? 'is-size-2' : 'is-size-4'}`}>
+                  <h2 className={`post-title title ${post.frontmatter.featured && !relatedPosts ? 'is-size-2' : 'is-size-4'}`}>
                     <Link to={post.fields.slug}>
                       {post.frontmatter.title}
                     </Link>
@@ -48,7 +92,7 @@ class BlogRoll extends React.Component {
                 </div>
                 <div className="post-content">
                   {
-                    post.frontmatter.featured ?
+                    post.frontmatter.featured && !relatedPosts ?
                       <figure className="media-left">
                         <Link className="post-thumbnail" to={post.fields.slug}>
                           <Img
@@ -80,7 +124,7 @@ class BlogRoll extends React.Component {
                     }
                   </p>
                   {
-                    post.frontmatter.featured ?
+                    post.frontmatter.featured && !relatedPosts ?
                       <p className="read-more">
                         <Link
                           to={post.fields.slug}
@@ -108,7 +152,7 @@ BlogRoll.propTypes = {
   }),
 }
 
-export default () => (
+export default props => (
   <StaticQuery
     query={graphql`
       query BlogRollQuery {
@@ -148,6 +192,6 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <BlogRoll data={data} count={count} />}
+    render={(data, count) => <BlogRoll relatedTags={props.tags} excludePostId={props.excludePostId} data={data} count={count} />}
   />
-)
+);

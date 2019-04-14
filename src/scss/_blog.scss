@@ -39,3 +39,42 @@
         }
     }
 }
+
+.related-posts {
+
+    .blog-post {
+    
+        .post-content {
+            > p:first-child {
+                display: none;
+            }
+        }
+        &.media {
+
+            &+ .blog-post {
+                margin-top: 1.5rem;
+            }
+            .media-left {
+                margin-bottom: 1em;
+            }
+
+            .post-thumbnail {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+.blog-article {
+
+    .post-footer {
+        .post-share {
+            margin-left: 30px;
+            text-align: right;
+
+            > a {
+               margin-left: 20px; 
+            }
+        }
+    }
+}
