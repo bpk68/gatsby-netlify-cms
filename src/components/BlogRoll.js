@@ -48,9 +48,6 @@ class BlogRoll extends React.Component {
 
     return (
       <div className={`post-feed ${relatedPosts ? 'related-posts' : ''}`}>
-        {
-          console.log(relatedPosts !== true)
-        }
         {filteredPosts &&
           filteredPosts.map(({ node: post }) => (
 
