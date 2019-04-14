@@ -1,29 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 
-
-export const CommentsLoader = () => {
-    const disqusContent = document.querySelector('#disqus_thread');
-
-    if (disqusContent !== null) {
-        const interval = setInterval(function () {
-            const disqusHeight = disqusContent.clientHeight;
-            if (disqusHeight > 100) {
-                document.querySelector('#comments-area').classList.add('comments--loaded');
-                clearInterval(interval);
-            }
-        }, 100);
-        document.querySelector('#comments-overlay, #comments-show').addEventListener('click', (e) => {
-            const commentsArea = document.querySelector('#comments-area');
-            commentsArea.classList.remove('comments--loaded');
-            commentsArea.classList.add('comments--opened');
-            e.preventDefault();
-        });
-    }
-}
-
-
-
 const CommentsSnippet = props => {
 
     const disqusHtml = `

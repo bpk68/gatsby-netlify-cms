@@ -8,7 +8,7 @@ import './all.sass';
 import '../scss/styles.scss';
 
 import useSiteMetadata from './SiteMetadata'
-import { CommentsLoader } from './CommentsSnippet';
+
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
@@ -67,11 +67,7 @@ const TemplateWrapper = ({ children }) => {
       <div>{children}</div>
       <Footer />
 
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `window.addEventListener('DOMContentLoaded', () => ${CommentsLoader()});`
-        }}
-      />
+      <script src='/js/app.js'></script>
 
       <script id="dsq-count-scr" src="//robkendal.disqus.com/count.js" async></script>
     </div>
