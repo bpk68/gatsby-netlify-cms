@@ -5,8 +5,65 @@
 [build.environment]
   YARN_VERSION = "1.9.4"
   YARN_FLAGS = "--no-ignore-optional"
-# [[redirects]]
-#   from = "http://sad-swirles-0ef4cc.netlify.com/*"
-#   to = "https://robkendal.co.uk/:splat"
-#   status = 301
-#   force = true
+[[redirects]]
+  from = "http://sad-swirles-0ef4cc.netlify.com/*"
+  to = "https://robkendal.co.uk/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/webpack-project-starter-kit/"
+  to = "/blog/quick-start-javascript-projects-with-this-webpack-project-starter-kit/"
+  status = 301
+[[redirects]]
+  from = "/are-tech-tests-still-relevant/"
+  to = "/blog/are-tech-tests-still-relevant-in-todays-hiring-landscape/"
+  status = 301
+[[redirects]]
+  from = "/how-to-land-that-dev-job-youve-always-wanted/"
+  to = "/blog/job-hunting-in-the-tech-industry-tips-tricks-and-experiences/"
+  status = 301
+[[redirects]]
+  from = "/arrow-functions-in-javascript/"
+  to = "/blog/how-to-use-arrow-functions-in-javascript-es6/"
+  status = 301
+[[redirects]]
+  from = "/everthing-wrong-with-css-in-js/"
+  to = "/blog/why-is-css-in-js-a-bad-or-good-idea/"
+  status = 301
+[[redirects]]
+  from = "/nest-smart-home-review/"
+  to = "/blog/nest-cam-nest-protect-and-nest-thermostat-review-1-year-in/"
+  status = 301
+[[redirects]]
+  from = "/how-becoming-a-parent-made-me-become-a-better-coder/"
+  to = "/blog/how-becoming-a-parent-made-me-become-a-better-coder/"
+  status = 301
+[[redirects]]
+  from = "/reading-google-sheets-data-using-javascript/"
+  to = "/blog/reading-google-sheets-data-using-javascript-with-google-sheets-reader/"
+  status = 301
+[[redirects]]
+  from = "/continuous-refactoring-avoiding-technical-debt-in-the-here-and-now/"
+  to = "/blog/continuous-refactoring-avoiding-technical-debt-in-the-here-and-now/"
+  status = 301
+[[redirects]]
+  from = "/what-bruce-lee-taught-me-about-business/"
+  to = "/blog/what-bruce-lee-taught-me-about-business/"
+  status = 301
+[[redirects]]
+  from = "/loading-html-fragments-via-webpack/"
+  to = "/blog/use-webpack-and-require-context-to-load-html-files/"
+  status = 301
+[[redirects]]
+  from = "/build-a-restful-node-api-server-using-json-files/"
+  to = "/blog/how-to-build-a-restful-node-js-api-server-using-json-files/"
+  status = 301
+[[redirects]]
+  from = "/using-css-custom-properties-to-apply-themes-in-react/"
+  to = "/blog/using-css-custom-properties-to-apply-themes-in-javascript-or-react/"
+  status = 301
+[[redirects]]
+  from = "/tag/*"
+  to = "/tags/:splat"
+  status = 301
+  force = true
