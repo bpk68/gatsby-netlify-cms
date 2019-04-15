@@ -1,10 +1,9 @@
 
-
-
 const CommentsLoader = () => {
     const disqusContent = document.querySelector('#disqus_thread');
 
     if (disqusContent !== null) {
+        //console.log('this is working!');
         const interval = setInterval(function () {
             const disqusHeight = disqusContent.clientHeight;
             if (disqusHeight > 100) {
@@ -19,7 +18,10 @@ const CommentsLoader = () => {
             e.preventDefault();
         });
     }
-}
+};
 
+window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
 
-window.addEventListener('DOMContentLoaded', () => { CommentsLoader(); })
+    CommentsLoader();
+});

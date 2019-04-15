@@ -8,6 +8,7 @@ import './all.sass';
 import '../scss/styles.scss';
 
 import useSiteMetadata from './SiteMetadata'
+import ScriptsLoader from '../components/ScriptsLoader';
 
 
 const TemplateWrapper = ({ children }) => {
@@ -67,7 +68,9 @@ const TemplateWrapper = ({ children }) => {
       <div>{children}</div>
       <Footer />
 
-      <script src='/js/app.js'></script>
+      {/* <script src='/js/app.js' type="text/javascript"></script> */}
+
+      <ScriptsLoader />
 
       <script id="dsq-count-scr" src="//robkendal.disqus.com/count.js" async></script>
     </div>
