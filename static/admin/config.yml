@@ -15,7 +15,7 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Post", name: "featured", widget: checkbox}
+      - {label: "Featured Post", name: "featured", widget: "boolean"}
       - {label: "Feature Image", name: "featuredimage", widget: image}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
