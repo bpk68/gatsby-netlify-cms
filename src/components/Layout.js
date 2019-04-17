@@ -35,7 +35,7 @@ const TemplateWrapper = ({ children }) => {
         <link rel="icon" type="image/png" sizes="96x96" href="/img/icons/favicon-96x96.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png" />
         <link rel="manifest" href="/img/icons/manifest.json" />
-        <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i" rel="stylesheet" />
+        <link defer href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet" />
         <meta name="theme-color" content="#fff" />
 
         <meta property="og:site_name" content="Kendal Mint Code" />
@@ -50,7 +50,7 @@ const TemplateWrapper = ({ children }) => {
         <meta name="twitter:site" content="@kendalmintcode" />
         <meta name="twitter:creator" content="@kendalmintcode" />
 
-        <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
+        {/* <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script> */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105680907-5"></script>
         <script async
           dangerouslySetInnerHTML={{
