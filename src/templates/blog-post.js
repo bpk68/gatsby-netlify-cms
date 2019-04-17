@@ -75,8 +75,10 @@ export const BlogPostTemplate = ({
 
             <NewsletterSnippet />
 
-            <h2 className="comments-title subtitle is-size-5">Read more</h2>
-            <BlogRoll tags={tags && tags.length ? tags : []} excludePostId={postId} />
+            <section className="section">
+              <h2 className="comments-title subtitle is-size-5">Read more</h2>
+              <BlogRoll tags={tags && tags.length ? tags : []} excludePostId={postId} />
+            </section>
           </div>
         </div>
       </div>

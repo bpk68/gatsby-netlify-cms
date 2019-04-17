@@ -13,7 +13,7 @@ class CommentsSnippet extends React.Component {
     render() {
 
         return (
-            <section id="comments-area" className="comments-area">
+            <section id="comments-area" className="comments-area section">
                 <h2 className="comments-title subtitle is-size-5">Comments</h2>
                 <div className="comments-inside">
                     <div id="disqus_thread"></div>
