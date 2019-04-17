@@ -13,7 +13,7 @@ const NotFoundPage = () => (
               <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
               <p>But don't worry, you still have options:</p>
               <ul>
-                <li>Go <a href={document.referrer}>back to the previous page</a></li>
+                <li>Go <a href="#previous-page" onClick={() => window.location = document.referrer}>back to the previous page</a></li>
                 <li><a href="/">Visit the home page</a> or,</li>
                 <li>Read some more <a href="/blog">lovely articles</a></li>
               </ul>

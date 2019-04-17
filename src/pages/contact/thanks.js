@@ -13,7 +13,7 @@ export default () => (
               <p>Thank you for signing up for my regular update email. You'll barely regret it!</p>
               <p>In true 'choose your own adventure' style, you can choose where to go next:</p>
               <ul>
-                <li>Go <a href={document.referrer}>back to the previous page</a></li>
+                <li>Go <a href="#previous-page" onClick={() => window.location = document.referrer}>back to the previous page</a></li>
                 <li><a href="/">Visit the home page</a> or,</li>
                 <li>Read some more <a href="/blog">lovely articles</a></li>
               </ul>

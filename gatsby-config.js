@@ -2,6 +2,7 @@ var proxy = require("http-proxy-middleware")
 
 module.exports = {
   siteMetadata: {
+    siteUrl: 'https://robkendal.co.uk',
     title: 'Kendal Mint Code - Rob Kendal, front-end developer and marketer',
     description:
       'I\'m Rob Kendal, an award- winning marketer and front- end developer(and, occasionally a guitarist) living in the beautiful Yorkshire countryside and working for the University of York.',
@@ -33,6 +34,7 @@ module.exports = {
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
