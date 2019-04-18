@@ -51,8 +51,8 @@ const TemplateWrapper = ({ children }) => {
         <meta name="twitter:creator" content="@kendalmintcode" />
 
         {/* <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script> */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105680907-5"></script>
-        <script async
+        {/* <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105680907-5"></script>
+        <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -62,7 +62,7 @@ const TemplateWrapper = ({ children }) => {
               gtag('config', 'UA-105680907-5');
             `,
           }}
-        />
+        /> */}
       </Helmet>
       <Navbar />
       <div>{children}</div>
