@@ -46,35 +46,47 @@ Parcel couldn't be easier to get going with Parcel for your next project. In fac
 
 The first two points can be achieved like this:
 
-```
-/* add it globally, so it's available to all your projects */yarn global add parcel-bundler
+```javascript
+/* add it globally, so it's available to all your projects */
+yarn global add parcel-bundler
 ```
 
 and initialise the project, adding a package.json file.
 
-```
+```javascript
 yarn init -y
 ```
 
 Now, at step 3, we can just create two files to do something useful. First, a starter html file
 
-```
-/* add this to your project root as index.html */<html><body></html>
+```markup
+/* add this to your project root as index.html */
+<html>
+  <body>
+    <main id="app"></main>
+    <script src="./index.js"></script>
+  </body>
+</html>
 ```
 
 Next, we need an initial JS file to do some work:
 
-```
-/* again, add this file to your project root as index.js */const myName = {  firstName: 'Parcel'  lastName: 'Tastic'};document.querySelector('#app').innerHTML = `Hello there, ${myName.firstName} ${myName.lastName}`;
+```javascript
+/* again, add this file to your project root as index.js */
+const myName = { 
+  firstName: 'Parcel',
+  lastName: 'Tastic'
+};
+document.querySelector('#app').innerHTML = `Hello there, ${myName.firstName} ${myName.lastName}`;
 ```
 
 Finally, kick it all off using the parcel command:
 
-```
+```javascript
 parcel index.html
 ```
 
-And that's it (for now). Parcel handily includes a development server (you can browse to http://localhost:1234 to view the output of the code above) so you should see the above rendered something like this output from my Code Sandbox instance:
+And that's it (for now). Parcel handily includes a development server (you can browse to `http://localhost:1234` to view the output of the code above) so you should see the above rendered something like this output from my Code Sandbox instance:
 
 <iframe src="https://codesandbox.io/embed/8z4vzk10p8?fontsize=14" title="Parcel example from blog" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
