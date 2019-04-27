@@ -3,16 +3,16 @@ templateKey: blog-post
 title: Using Parcel JS bundler with React
 date: 2019-04-27T07:06:11.293Z
 featured: true
+featuredimage: /img/react-parcel-blog-post.png
 description: >-
-  You can build a Parcel JS website using React, instead of using Create React App. In this article, we'll look at 
-  how to add in the missing parts of the Parcel JS bundler to allow us to build sites with React.
+  You can build a Parcel JS website using React, instead of using Create React
+  App. In this article, we'll look at  how to add in the missing parts of the
+  Parcel JS bundler to allow us to build sites with React.
 tags:
   - Development
   - JavaScript
   - React
 ---
-
-
 A few days ago I wrote an article about my [Parcel JS starter kit](https://robkendal.co.uk/blog/2019-04-26-using-parcel-bundler-as-a-webpack-alternative/) and using [Parcel JS bundler as an alternative to the popular Webpack](https://robkendal.co.uk/blog/2019-04-26-using-parcel-bundler-as-a-webpack-alternative/) (and yes, I even have a [Webpack starter kit](https://robkendal.co.uk/blog/quick-start-javascript-projects-with-this-webpack-project-starter-kit/)!).
 
 However, if you're quite keen on using React, but don't want to go down the [Create React App](https://facebook.github.io/create-react-app/) route, read on! I'm going to build on the [Parcel JS starter kit](https://robkendal.co.uk/blog/2019-04-26-using-parcel-bundler-as-a-webpack-alternative/) and add in a few necessary pieces of the puzzle so you can use [React JS](https://reactjs.org/) with your Parcel projects.
@@ -29,15 +29,15 @@ Well, until now!
 
 Because we're going solo for now, we have to add a few things to our project in order to get React working and start using the nice, shiny ES6 language syntax and features. Namely:
 
-- React (and some React bits, such as React Component).
-- Babel. For Babel, we're also going to add the correct preset and some React niceties so that Babel and React play well with each other.
-- Package.json. Yes, this is already in the project, but we need to change a few things in here to make everything work.
+* React (and some React bits, such as React Component).
+* Babel. For Babel, we're also going to add the correct preset and some React niceties so that Babel and React play well with each other.
+* Package.json. Yes, this is already in the project, but we need to change a few things in here to make everything work.
 
 ### It started with a kit
 
 We're going to build upon the [CodeSandbox example from the previous article](https://codesandbox.io/s/8z4vzk10p8?fontsize=14) which, you may remember, looks like this:
 
-[image here]
+![Screenshot showing parcel in action](/img/screenshot_2019-04-27-codesandbox-1-.png "Screenshot of Parcel JS loading the text")
 
 Which is using plain ol' JavaScript to load the following code:
 
@@ -121,8 +121,7 @@ ReactDOM.render(
 
 Ta da! Nothing very flash, just black text on a white background, but it does the trick and is a great example of what you can do with very little effort using Parcel and React together.
 
-[image here]
-
+![Heading text loaded using Parcel and React](/img/screenshot_2019-04-27-codesandbox.png "Heading text loaded using Parcel and React")
 
 ## The complete example and next steps
 
