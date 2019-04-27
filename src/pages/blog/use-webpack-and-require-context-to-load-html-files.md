@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Use Webpack and require.context to load HTML files
 featuredimage: /img/malcolm-lightbody-668615-unsplash-md.jpg
-featured: true
+featured: false
 date: 2019-03-18T10:48:02.800Z
 description: >-
   In this code article, I'm going to show you how to load fragments of HTML from

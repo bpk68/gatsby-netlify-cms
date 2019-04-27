@@ -5,7 +5,7 @@ date: 2019-04-26T07:06:11.293Z
 featured: true
 featuredimage: /img/blog-parcel-bundler-alternative.jpg
 description: >-
-  Parcel JS is a Webpack alternative that helps you build modern JavaScript. If
+  Parcel JS is a Webpack alternative that helps you build modern JavaScript projects. If
   you're looking for a simple Webpack alternative, try this Parcel JS starter
   kit.
 tags:
