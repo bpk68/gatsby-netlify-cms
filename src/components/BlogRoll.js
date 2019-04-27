@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 import { Link, graphql, StaticQuery } from 'gatsby'
-import Img from 'gatsby-image';
+import PreviewCompatibleImage from './PreviewCompatibleImage';
 
 
 
@@ -60,10 +60,13 @@ class BlogRoll extends React.Component {
                 !post.frontmatter.featured || relatedPosts ?
                   <figure className="media-left">
                     <Link className="post-thumbnail" to={post.fields.slug}>
-                      <Img
-                        fluid={post.frontmatter.featuredimage.childImageSharp.fluid}
-                        fadeIn={true}
-                        alt="blog post thumbnail"
+                      <PreviewCompatibleImage
+                        imageInfo={{
+                          image: post.frontmatter.featuredimage,
+                          alt: `featured image thumbnail for post ${
+                            post.title
+                            }`,
+                        }}
                       />
                     </Link>
                   </figure>
@@ -92,10 +95,13 @@ class BlogRoll extends React.Component {
                     post.frontmatter.featured && !relatedPosts ?
                       <figure className="media-left">
                         <Link className="post-thumbnail" to={post.fields.slug}>
-                          <Img
-                            fluid={post.frontmatter.featuredimage.childImageSharp.fluid}
-                            fadeIn={true}
-                            alt="blog post thumbnail"
+                          <PreviewCompatibleImage
+                            imageInfo={{
+                              image: post.frontmatter.featuredimage,
+                              alt: `featured image thumbnail for post ${
+                                post.title
+                                }`,
+                            }}
                           />
                         </Link>
                       </figure>
