@@ -10,7 +10,6 @@ description: >-
   need.
 tags:
   - Thoughts
-  - ''
 ---
 ![Header image for getting hired as a developer blog article](/img/getting-a-development-job-blog-post.png)
 
@@ -41,7 +40,7 @@ I am not the best developer in the world: I still make mistakes, I still learn a
 
 I also have a shorter, hot-take article on [job hunting in the tech insudtry](https://robkendal.co.uk/blog/job-hunting-in-the-tech-industry-tips-tricks-and-experiences/) if you'd like even more info.
 
-<a name="step1"><a/>Step 1: developing a game plan
+<a name="step1"></a>Step 1: developing a game plan
 ----------------
 
 Before you start hitting the apply button and throwing CV's at employers like Gambit from X-men, I think it's helpful to take a step back and think about a few things that will absolutely help you when you're in the midst of a handful of interview processes. 
