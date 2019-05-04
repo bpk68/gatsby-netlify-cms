@@ -61,11 +61,11 @@ If you can shift your mental approach and thinking around how you tackle job hun
 
 People approach job hunting in very different ways. For example, I have a friend who likes to take his time, applying for maybe one or two roles at a time, seeing how they pan out and being careful not to overwhelm himself. 
 
-I, on the other hand, I prefer to attack it and apply for multiple roles that pique my interest, handling and tracking everything using \[Trello](https://trello.com). I play the numbers game and treat the job hunting process as a large project, which can be broken down and tackled in small parts — a little like a Sprint board, but for jobs.
+I, on the other hand, I prefer to attack it and apply for multiple roles that pique my interest, handling and tracking everything using [Trello](https://trello.com). I play the numbers game and treat the job hunting process as a large project, which can be broken down and tackled in small parts — a little like a Sprint board, but for jobs.
 
 ![Todo list in a notebook](/img/checklist-composition-handwriting-1226398.jpg "Photo by Suzy Hazelwood from Pexels")
 
-How you tackle your own job hunting process is up to you. However, I recommend using a project management tool to track your applications. I use Trello but \[Asana](https://asana.com/) or \[Evernote](https://evernote.com/) will work. **Basically, anything that allows you to mark a job as being at a particular point in the application process.** 
+How you tackle your own job hunting process is up to you. However, I recommend using a project management tool to track your applications. I use Trello but [Asana](https://asana.com/) or [Evernote](https://evernote.com/) will work. **Basically, anything that allows you to mark a job as being at a particular point in the application process.** 
 
 I've found this hugely valuable because you rarely apply for one job at a time and job applications are very asynchronous things, and information such as people, dates, and tasks can become easily lost in the overwhelming deluge of emails, phone calls, etc.
 
