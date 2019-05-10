@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Building a design system using Bulma for rapid development that scales
 date: 2019-04-17T17:04:00.000Z
-featured: true
+featured: false
 featuredimage: /img/design-systems.jpg
 description: >-
   Rapid front-end development that scales well depends on solid design systems.
