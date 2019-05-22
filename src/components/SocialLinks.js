@@ -17,6 +17,10 @@ const SocialLinks = props => {
                 <span className="fab fa-codepen" aria-hidden="true"></span>
                 <span className="screen-reader-text">Have a peek at my Codepen</span>
             </a>
+            <a href="https://dev.to/kendalmintcode" target="_blank" rel="noreferrer noopener">
+                <span className="fab fa-dev" aria-hidden="true"></span>
+                <span className="screen-reader-text">Connect with me on Dev.to</span>
+            </a>
             <a href="https://robkendal.co.uk/rss.xml" target="_blank" rel="noreferrer noopener">
                 <span className="fas fa-rss" aria-hidden="true"></span>
                 <span className="screen-reader-text">Subscribe to my RSS feed</span>
