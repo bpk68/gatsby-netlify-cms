@@ -9,7 +9,6 @@ description: >-
   workforce, or at least offering remote working as a more common hiring option?
 tags:
   - Thoughts
-  - ''
 ---
 ![Blog post header image of a remote workforce with the blog title](/img/remote-working-are-companies-missing-out-blog-post.png)
 
