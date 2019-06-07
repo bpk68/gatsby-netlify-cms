@@ -64,7 +64,7 @@ It's not always a silver bullet, but if you can understand the _why's_ then you 
 
 Leaving things alone or being stuck in a state of indecision, inaction, is not helpful. Sure, we all need a bit of time and space to think, but delaying action, delaying progress ultimately harms our goals and inhibits forward motion.
 
-I'm not suggestion that you just start banging out any old code without a thought about the architecture or how some components might interact. But, if some sort of indecision is hold you back then sometimes its actually quite helpful to just begin down a path and either adjust as you go (see my article on continuous refactoring for some tips) or backtrack and redo. 
+I'm not suggestion that you just start banging out any old code without a thought about the architecture or how some components might interact. But, if some sort of indecision is hold you back then sometimes its actually quite helpful to just begin down a path and either adjust as you go (see my [article on continuous refactoring](https://robkendal.co.uk/blog/continuous-refactoring-avoiding-technical-debt-in-the-here-and-now/) for some tips) or backtrack and redo. 
 
 Making some sort of progress, even in the wrong direction, can sometimes help move you past the block, even opening up some more ideas for you.
 
