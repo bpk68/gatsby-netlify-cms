@@ -25,19 +25,19 @@ However, during testing I was slapped in the face by the rather rude Hooks warni
 
 > Hooks can only be called inside the body of a function component.
 
-The problem is, that's _exactly_ where all the uses of hooks were being called from....hmmm
+The problem is, that's _exactly_ where all the uses of Hooks were being called from....hmmm
 
 ## So what causes the invalid hook call warning?
 
-The warning can be fairly misleading if, like me, you've followed all the hooks rules _and_ the tool you're building is working in a local example/demo project — which this was.
+The warning can be fairly misleading if, like me, you've followed all the Hooks rules _and_ the tool you're building is working in a local example/demo project — which this was.
 
 Despite the error message being a little misleading, the warning comes with a link to the [really helpful official documentation](https://reactjs.org/warnings/invalid-hook-call-warning.html) from the React team, which, in summary, informs us that there are actually three possible causes of this issue:
 
-> There are three common reasons you might be seeing it:
+_There are three common reasons you might be seeing it:_
 
-1. You might have mismatching versions of React and React DOM.
-2. You might be breaking the Rules of Hooks.
-3. You might have more than one copy of React in the same app.
+1. _You might have mismatching versions of React and React DOM._
+2. _You might be breaking the Rules of Hooks._
+3. _You might have more than one copy of React in the same app._
 
 I definitely wasn't falling foul of causes two or three, and I thought I had number one covered, but this required a little more digging. 
 
@@ -47,7 +47,7 @@ Hugely frustrating times ensued. Monitors were thrown out of the window and I st
 
 After much searching and debugging, the problem seemed to definitely lay with this duplicate versions of React or React DOM issue. 
 
-In fact, the answer lay at the end of the helpful React hooks documentation above. There was a link to an extended [GitHub discussion on the pesky invalid hook call warning error](https://github.com/facebook/react/issues/13991) and plenty of fellow devs with the exact same woes. More importantly, it had lots of different possible solutions to different situations.
+In fact, the answer lay at the end of the helpful React Hooks documentation above. There was a link to an extended [GitHub discussion on the pesky invalid hook call warning error](https://github.com/facebook/react/issues/13991) and plenty of fellow devs with the exact same woes. More importantly, it had lots of different possible solutions to different situations.
 
 For my particular scenario, I'd used my very own [Parcel JS starter project (complete with React)](https://robkendal.co.uk/blog/2019-04-29-using-parcel-bundler-with-react-js/) to build the query builder. I did take note of the 'multiple versions of React' no no from the above list and had used [Parcel's alias feature](https://parceljs.org/module_resolution.html#aliases), as well as making sure to employ the `peerDependencies` config setting in package.json. 
 
@@ -70,9 +70,9 @@ This diagram illustrates the typical setup.
 
 ![typical npm dependency diagram illustrating how the consuming project depends on a dependency project](/img/dependency-hooks-example.png)
 
-The problem here, is that, despite all the precautions above, our 'Shiny new thing' widget was bundling React into its final package \*\*as well as our existing/consuming project containing React.
+The problem here, is that, despite all the precautions above, our 'Shiny new thing' widget was bundling React into its final package _as well as_ our existing/consuming project containing React.
 
-Thus, unknowingly, I'd violated the first law of hooks: **thou shalt not have multiple versions of React in the same project.**
+Thus, unknowingly, I'd violated the first law of Hooks: **thou shalt not have multiple versions of React in the same project.**
 
 The solution? Stop using Parcel and switch to Webpack (don't worry, I've got a [great Webpack starter project](https://github.com/bpk68/web-template) too, with all the initial nuts and bolts you'll need preconfigured). 
 
@@ -82,7 +82,7 @@ The solution? Stop using Parcel and switch to Webpack (don't worry, I've got a [
 
 It's probably less likely that you'll have a Parcel JS specific problem here, but either way, you'll probably find that **your mysterious React invalid hooks error is caused by duplicate React versions**. And, since Webpack is arguably the most popular JS bundler out there, there _is_ a good chance you'll be using that to bundle and package your lovely dependency. 
 
-In order to dodge the invalid hooks error caused by duplicate React version, using Webpack, we'll need to do a few things in the dependency project (i.e. the widget you're building):
+In order to dodge the invalid Hooks error caused by duplicate React version, using Webpack, we'll need to do a few things in the dependency project (i.e. the widget you're building):
 
 ### Set React as a peer dependency
 
@@ -129,6 +129,6 @@ Here's a quick summary of the helpful links used throughout this article:
 
 * [Official React hooks error documentation](https://reactjs.org/warnings/invalid-hook-call-warning.html)
 * [The React Query Builder on GitHub](https://github.com/IAM-Cloud-Solutions/iamc-query-builder)
-* [The hooks error discussion on GitHub](https://github.com/facebook/react/issues/13991)
+* [The Hooks error discussion on GitHub](https://github.com/facebook/react/issues/13991)
 * [My Webpack starter project](https://github.com/bpk68/web-template)
 * [My Parcel JS starter project with React](https://github.com/bpk68/parcel-starter-with-react)
