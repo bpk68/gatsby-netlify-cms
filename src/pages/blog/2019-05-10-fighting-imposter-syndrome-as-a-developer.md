@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Fighting imposter syndrome as a developer
 date: 2019-05-10T10:10:20.293Z
-featured: true
+featured: false
 featuredimage: /img/imposter-syndrome-blog-post.png
 description: >-
   In this article, I wanted to help people to understand a little more about
