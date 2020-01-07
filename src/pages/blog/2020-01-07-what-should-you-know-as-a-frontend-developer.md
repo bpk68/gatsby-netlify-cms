@@ -7,6 +7,9 @@ featuredimage: /img/what-should-you-know-as-a-frontend-developer-blog-post.png
 description: >-
   Whether you're a budding frontend developer or have been coding a while, what
   exactly should you know as a frontend developer?
+tags:
+  - Thoughts
+  - Development
 ---
 ![What you should know as a frontend developer blog header image](/img/what-should-you-know-as-a-frontend-developer-blog-post.png)
 
