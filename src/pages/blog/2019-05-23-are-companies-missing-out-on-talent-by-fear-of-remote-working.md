@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Are companies missing out on talent by fear of remote working?
 date: 2019-05-23T19:40:00.128Z
-featured: true
+featured: false
 featuredimage: /img/remote-working-are-companies-missing-out-blog-post.png
 description: >-
   What are some of the factors that prevent companies from building a remote
