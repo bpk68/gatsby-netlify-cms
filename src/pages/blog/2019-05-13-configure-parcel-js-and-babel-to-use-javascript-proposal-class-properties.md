@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Configure Parcel JS and Babel to use JavaScript proposal class properties
 date: 2019-05-13T06:45:24.216Z
-featured: true
+featured: false
 featuredimage: /img/using-proposal-class-properties-blog-post.png
 description: >-
   Want to use Parcel JS with frameworks like React but keep using shiny new
