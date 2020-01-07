@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Using Parcel JS bundler with React
 date: 2019-04-27T07:06:11.293Z
-featured: true
+featured: false
 featuredimage: /img/react-parcel-blog-post.png
 description: >-
   You can build a Parcel JS website using React, instead of using Create React
