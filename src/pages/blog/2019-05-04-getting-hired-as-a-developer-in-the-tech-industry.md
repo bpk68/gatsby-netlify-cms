@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Getting hired as a developer in the tech industry
 date: 2019-05-04T14:02:06.729Z
-featured: true
+featured: false
 featuredimage: /img/getting-a-development-job-blog-post.png
 description: >-
   If you're looking to land your first job as a web developer in the tech
