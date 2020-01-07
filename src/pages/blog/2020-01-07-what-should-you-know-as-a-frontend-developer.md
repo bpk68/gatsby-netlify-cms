@@ -21,19 +21,19 @@ I'm going to unload my brain a little and share some of the common skills or are
 
 This is a long post, so here are some jump links to help you out:
 
-* Technology-specific skills
-* Core, role-specific skills
-  * HTML
-  * CSS
-  * JavaScript
-  * Accessibility
-  * Performance optimisation
-  * Layouts, UI patterns and UX
-  * Debugging and troubleshooting
-  * Unit testing
-* Broader skills
+* [Technology-specific skills](#tech-skills)
+* [Core, role-specific skills](#core-skills)
+  * [HTML](#html-skills)
+  * [CSS](#css-skills)
+  * [JavaScript](#javascript-skills)
+  * [Accessibility](#accessibility-skills)
+  * [Performance optimisation](#performance-skills)
+  * [Layouts, UI patterns and UX](#layout-skills)
+  * [Debugging and troubleshooting](#debugging-skills)
+  * [Unit testing](#testing-skills)
+* [Broader skills](#soft-skills)
 
-## Technology-specific skills
+## Technology-specific skills <a name="tech-skills"></a>
 
 Increasingly, companies are hiring for person-fit and culture alignment these days over hardcore, specific or niche skillsets. A lot of forward-thinking companies prefer people who are adaptable and have a capacity to skill up quickly and play nicely with others.
 
@@ -49,7 +49,7 @@ No amount of exposure to different technologies, frameworks and platforms will d
 
 The thing to remember is that technologies change very quickly and tying yourself into one too deeply too early in your career can have its drawbacks. I'd recommend gaining a solid, high-level overview by sourcing some great introduction articles or other media, such as [this great comic book intro to Kubernetes from Google](https://cloud.google.com/kubernetes-engine/kubernetes-comic/). 
 
-## Core, role-specific skills
+## Core, role-specific skills <a name="core-skills"></a>
 
 This is where the meat and potatoes of your skills should lay as a frontend developer. Now, should these be hyper niched, specific, or more versatile and broad? 
 
@@ -59,13 +59,13 @@ There's tons of sub topics that you can delve into and specialise in, whether th
 
 In terms of frontend development, the following list will give you a rounded set of applicable skills to just about any frontend role you do:
 
-### HTML - the structural foundation
+### HTML - the structural foundation <a name="html-skills"></a>
 
 The building blocks of any web page, HTML offers to structure our raw data, as well as providing an interface called the [DOM (document object model)](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) to attach events to and which allows scripts to access and update the content.
 
 A good understanding of HTML would include being able to identify the right elements for the right job, semantics of structural layout, what attributes are available (important for accessibility), and at least a little on how the DOM works and what its purpose is. 
 
-### CSS - the paint on top
+### CSS - the paint on top <a name="css-skills"></a>
 
 Without looking into preprocessors like SASS, raw CSS is the icing slathered on top of the HTML cake to make our structured content look a certain way and lay out in a particular fashion. 
 
@@ -79,7 +79,7 @@ Additionally, I would study the more tricky concepts; things like flexbox, or CS
 
 Finally, some common layout gotchas, such as a collapsing parent element when all child elements are floated. **This will help you troubleshoot display bugs and solve them!**
 
-### JavaScript - the behaviour controller
+### JavaScript - the behaviour controller <a name="javascript-skills"></a>
 
 JavaScript should look after the _behaviour_ of our pages. It manipulates content and allows us to truly interact with the page beyond the limited controls that HTML (and CSS) gives us. 
 
@@ -97,7 +97,7 @@ Also, take the time to do a little [reading on the CSSOM](https://developer.mozi
 
 Finally, I'd certainly check out the `fetch()` paradigm and all [about how Promises work](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If you're dealing with anything in modern frontend development, you'll be interacting with an API. Of course, there are libraries that abstract a lot of this away from you, but knowing how these two core JavaScript concepts work will help your understanding of asynchronous code execution.
 
-### Accessibility
+### Accessibility <a name="accessibility-skills"></a>
 
 An increasingly hot topic, but a vital one to the web ecosystem for so many users who have different accessibility needs. You don't need to be a guru on the in's and out's of making everything accessible but it's certainly advised to be mindful of how to approach your frontend development with inclusion in mind. 
 
@@ -105,7 +105,7 @@ In practice this means understanding how different people can access your site/a
 
 Rather than bolting it on as a separate topic, accessibility is helpful to weave into the initial learning. For example, if you're learning about HTML forms, learn how tab indexing and default HTML buttons help with making a form more accessible.
 
-### Performance optimisation
+### Performance optimisation <a name="performance-skills"></a>
 
 Again, there are people who specialise almost exclusively in optimising web app performance. You don't need that level of understanding, but it's helpful to know how to improve.
 
@@ -117,7 +117,7 @@ This is also where some deeper knowledge of code execution comes into play. Are 
 
 Knowing what options are available during build and post-deployment steps help too. Can you leverage a CDN to serve content and assets? Are you using a rigorous compression and production building of your apps and web sites? 
 
-### Layouts, UI design patterns and UX
+### Layouts, UI design patterns and UX <a name="layout-skills"></a>
 
 OK, these are three big topics here, but I don't think you need to be an expert in any of them as a frontend dev. 
 
@@ -125,7 +125,7 @@ That said, you'll be working in the area where your users play, building the int
 
 UX is a huge area in its own right, but it'll go a long way to bridging any gaps between departments and your users if you can articulate designs and ideas into wireframes, and interpret user feedback into meaningful changes to your code.
 
-### Debugging and troubleshooting (both skills and tools)
+### Debugging and troubleshooting (both skills and tools) <a name="debugging-skills"></a>
 
 It doesn't matter whether you're barely on page one of your first development textbook, or you've been a developer for 20 years, **things are going to go wrong and stop working or do something so weird that you'll be scratching your head**.
 
@@ -135,7 +135,7 @@ It can be an intangible skill, but learning how to solve problems is fundamental
 
 _...PS - it's almost always caused by caching or spelling a variable name incorrectly :D_
 
-### Unit testing
+### Unit testing <a name="testing-skills"></a>
 
 This one's good for the team, but knowing some common concepts around how and what to test and what frameworks are available to help you is important. 
 
@@ -145,7 +145,7 @@ Bringing a willingness to unit test to the table, as well as some understanding 
 
 There aren't too many hard and fast rules with unit testing, but in the frontend world, using a framework such as Jest, we tend to look at user-based outcomes rather than specific execution of code. For example, we might like to check that if a button is clicked (simulated in the unit tests of course), does a particular UI element change or update? As opposed to 'did this particular method in the JavaScript class fire?'. 
 
-## Broader, 'soft' skills
+## Broader, 'soft' skills <a name="soft-skills"></a>
 
 I'll put this out there, I'm not a fan of the term 'soft skills' for many reasons and there's a growing unease across our industry with the term too. 
 
