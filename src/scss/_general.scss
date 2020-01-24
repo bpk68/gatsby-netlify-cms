@@ -15,7 +15,7 @@ body {
 
 a {
   color: $color-accent;
-  text-decoration: none;
+  text-decoration: underline;
   -webkit-transition: color .3s ease;
   transition: color .3s ease;
   font-weight: 600;
@@ -280,6 +280,7 @@ a.button {
   // padding: 10px 30px;
   -webkit-transition: .3s;
   transition: .3s;
+  text-decoration: none;
 }
 
 button:hover,
