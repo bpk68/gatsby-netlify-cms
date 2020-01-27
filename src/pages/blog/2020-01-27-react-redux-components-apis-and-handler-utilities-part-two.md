@@ -282,7 +282,7 @@ This deceptively simple class can reduce a ton of repetitive code from our app. 
 - an `actions` object that is unique to the area of state we're dealing with
 - and a `baseUrl` that again, is likely to be unique to the area of current interest
 
-It could be expanded for other CRUD operations, such as updating and deleting. For now, hoever, let's just deal with the common getting of items from an API.
+It could be expanded for other CRUD operations, such as updating and deleting. For now, however, let's just deal with the common getting of items from an API.
 
 You can see how we combine both dispatch methods to inform our app that we're starting a request (`requestGetItems`) and for handling our state update when we return with a list of users (`requestGetItemsSuccess`). 
 
