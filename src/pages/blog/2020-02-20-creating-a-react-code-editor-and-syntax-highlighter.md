@@ -220,7 +220,7 @@ Let's create some nice styles to join up the dots.
 
 For our styles, there's nothing too flash, but here they are:
 
-```javascript
+```css
 /** ---------------------------- */
 /** --- Code editor ------------ */
 /** ---------------------------- */
