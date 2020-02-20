@@ -174,7 +174,7 @@ We're using `useState` to track updates to our input, for which we're using a te
 </pre>
 ```
 
-`useEffect` replaces many React lifecycle functions, such as `componentDidMount()`. For our purposes, we're essentially watching changes to both the language passed in via props, and our input changes. If either happens, we fire Prism's highlightAll function to update the styling.
+`useEffect` replaces many React lifecycle functions, such as `componentDidMount()`. For our purposes, we're essentially watching changes to both the language passed in via props, and our input changes. If either happens, we fire Prism's `highlightAll` function to update the styling.
 
 ```javascript
 useEffect(() => {
