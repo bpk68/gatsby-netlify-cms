@@ -16,7 +16,16 @@ export default class FrontEndPodcastPage extends React.Component {
     render() {
         return (
             <Layout>
-                <section className="hero is-primary is-medium has-text-dark">
+                <section
+                    className="hero is-primary is-medium has-text-dark"
+                    style={{
+                        backgroundImage: `url('/img/trianglify.png')`,
+                        backgroundPosition: `top center`,
+                        backgroundAttachment: `fixed`,
+                        backgroundRepeat: `no-repeat`,
+                        backgroundSize: `cover`
+                    }}
+                >
                     <div className="hero-body has-text-centered">
                         <div className="container">
                             <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet">
@@ -57,7 +66,7 @@ export default class FrontEndPodcastPage extends React.Component {
                             </ul>
 
                             <h2>Where can I listen to the podcast?</h2>
-                            <p>Glad you asked. I create all the episodes <a href="https://anchor.fm/the-front-end" target="__blank">using Anchor</a>, and that's probably the best place to start. Although the podcast is pushed out to all popular channels, such as Spotify and Apple Podcasts, 
+                            <p>Glad you asked. I create all the episodes <a href="https://anchor.fm/the-front-end" target="__blank">using Anchor</a>, and that's probably the best place to start. Although the podcast is pushed out to all popular channels, such as Spotify and Apple Podcasts,
                             by visiting <a href="https://anchor.fm/the-front-end" target="__blank">The Front End's Anchor page</a>, you'll be able to find your preferred listening avenue.
                             </p>
                             <h2>Can I be featured in an episode?</h2>

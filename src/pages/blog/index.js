@@ -13,7 +13,10 @@ export default class BlogIndexPage extends React.Component {
             backgroundImage: `url('/img/trianglify.png')`,
             backgroundPosition: `top center`,
             backgroundAttachment: `fixed`,
-          }}>
+            backgroundRepeat: `no-repeat`,
+            backgroundSize: `cover`
+          }}
+        >
           <div className="hero-body has-text-centered">
             <div className="container">
               <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet">
