@@ -25,6 +25,8 @@ export const IndexPageTemplate = ({
             })`,
           backgroundPosition: `top center`,
           backgroundAttachment: `fixed`,
+          backgroundRepeat: `no-repeat`,
+          backgroundSize: `cover`
         }}>
         <div className="hero-body has-text-centered">
           <div className="container">
