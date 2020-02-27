@@ -44,6 +44,9 @@ export default class FrontEndPodcastPage extends React.Component {
                                 articles on here and <a href="https://dev.to/kendalmintcode" target="__blank">the Dev platform</a>, I wanted to expand my creative outlets and bring a different type of content to my audience.</p>
                             <p>Also, as a coding mentor on the wonderful <a href="https://codingcoach.io" target="__blank">Coding Coach</a> platform, I find that there is growing number of budding developers out there who would like help, advice and support
                             on starting their career, asking questions and getting answers. A podcast seems like a great way to reach them with a little more warmth than the flat text of a blog aticle.</p>
+                            <h2>Finding out more</h2>
+                            <p>The Front End has <a href="">its very own podcast website</a> where you can find out more or you can listen directly <a href="https://anchor.fm/the-front-end">on anchor podcasts</a></p>
+                            <p><a href="https://thefrontendpodcast.site" className="button is-primary">listen now</a></p>
                             <h2>What do you talk about on The Front End?</h2>
                             <p>Lots of things. We've got some special guests and a host of topics and ideas lined up, including:</p>
                             <ul>

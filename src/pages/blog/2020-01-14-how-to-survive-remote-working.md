@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: How to survive remote working
 date: 2020-01-14T14:59:50.206Z
-featured: true
+featured: false
 featuredimage: /img/remote-working-tips-and-tricks-blog-post.png
 description: >-
   Whether you're brand new to remote working, unsure if it's the right fit for

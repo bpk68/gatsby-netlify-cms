@@ -8,7 +8,7 @@ function encode(data) {
         .join('&')
 }
 
-class NewsletterSnippet extends React.Component {
+class PodcastSnippet extends React.Component {
 
     constructor(props) {
         super(props)
@@ -122,5 +122,5 @@ class NewsletterSnippet extends React.Component {
     }
 };
 
-export default NewsletterSnippet;
+export default PodcastSnippet;
 

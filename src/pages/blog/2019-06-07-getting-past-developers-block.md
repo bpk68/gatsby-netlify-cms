@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Getting past developers block
 date: 2019-06-07T10:58:11.572Z
-featured: true
+featured: false
 featuredimage: /img/getting-past-developers-block-blog-post.png
 description: >-
   Ever found yourself just plain stuck? In this article, we'll be looking at

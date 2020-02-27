@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Solving React Hooks' invalid hook call warning
 date: 2019-12-22T09:28:23.344Z
-featured: true
+featured: false
 featuredimage: /img/fixing-invalid-hooks-warning-blog-header.png
 description: >
   Building a React project and have the error 'Hooks can only be called inside

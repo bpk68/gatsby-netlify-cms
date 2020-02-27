@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: What should you know as a frontend developer?
 date: 2020-01-07T12:32:00.302Z
-featured: true
+featured: false
 featuredimage: /img/what-should-you-know-as-a-frontend-developer-blog-post.png
 description: >-
   Whether you're a budding frontend developer or have been coding a while, what
