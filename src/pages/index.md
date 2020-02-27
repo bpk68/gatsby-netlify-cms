@@ -9,9 +9,6 @@ description: This is the website of Rob Kendal
 intro:
   heading: What is a Rob?
   description: >
-    <p>Rob is an experienced UI developer and marketer who likes simple, organised thinking and making clever things happen in progressive web apps. 
-    I like JavaScript (a lot!), React (amongst other frameworks), and solving problems. 
-    You can find me working at <a href="https://www.iamcloud.com">IAM Cloud</a>. Drop by and say hi on me[at]robkendal.co.uk.</p>
-    <p>What's more, I also run a podcast all about front end development and careers in tech. You can <a href="https://anchor.fm/the-front-end">listen to the podcast now</a> or 
-    find out more on <a href="https://thefrontendpodcast.site">The Front End Podcast website</a>.</p>
+    Rob is an experienced UI developer and marketer who likes simple, organised thinking and making clever things happen in progressive web apps. 
+    I like JavaScript (a lot!), React (amongst other frameworks), and solving problems. You can find me working at <a href="https://www.iamcloud.com">IAM Cloud</a>. Drop by and say hi on me[at]robkendal.co.uk.
 ---

@@ -60,6 +60,8 @@ export const IndexPageTemplate = ({
                       <p dangerouslySetInnerHTML={
                         { __html: intro.description }
                       }></p>
+                      <p>What's more, I also run a podcast all about front end development and careers in tech. You can <a href="https://anchor.fm/the-front-end">listen to the podcast now</a> or 
+    find out more on <a href="https://thefrontendpodcast.site">The Front End Podcast website</a>.</p>
                     </div>
                   </div>
 
