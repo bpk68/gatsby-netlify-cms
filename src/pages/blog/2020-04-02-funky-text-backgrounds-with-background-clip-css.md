@@ -95,6 +95,13 @@ Support is pretty good actually with modern browsers happily clipping that text.
 
 And there we have it. Simple, quick, but such a striking effect that can brighten up some otherwise dull text — just be mindful of what background you choose as it can have an impact on visual impairments and make some text hard to read.
 
+<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="robkendal" data-slug-hash="MWwRmMo" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Textured Transparent Text Effect - CSS">
+  <span>See the Pen <a href="https://codepen.io/robkendal/pen/MWwRmMo">
+  Textured Transparent Text Effect - CSS</a> by Rob Kendal (<a href="https://codepen.io/robkendal">@robkendal</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
 ## Helpful links
 
 Here are some supporting links used in the article:
