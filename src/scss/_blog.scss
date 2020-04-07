@@ -67,6 +67,24 @@
 
 .blog-article {
 
+    img {
+        display: block;
+        margin: auto;
+        text-align: center;
+        width: 100%;
+    }
+
+    ul {
+        li > p {
+            margin: 0 !important; // removes a weird paragraph tag that's somehow stuffed in there!
+        }
+
+        ul {
+            margin-left: 0;
+            margin-top: 0;
+        }
+    }
+
     .post-footer {
         .post-share {
             margin-left: 30px;
