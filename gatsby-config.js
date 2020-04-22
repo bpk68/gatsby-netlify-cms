@@ -5,7 +5,7 @@ module.exports = {
     siteUrl: 'https://robkendal.co.uk',
     title: 'Kendal Mint Code - Rob Kendal, front-end developer and marketer',
     description:
-      'I\'m Rob Kendal, an award- winning marketer and front- end developer(and, occasionally a guitarist) living in the beautiful Yorkshire countryside and working for the University of York.',
+      'I\'m Rob Kendal, an award-winning marketer and front end developer (occasionally a guitarist) living in the beautiful Yorkshire countryside building things in Node JS and React.',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

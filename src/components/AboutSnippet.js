@@ -13,7 +13,8 @@ const AboutSnippet = props => (
                 <h3 className="author-title">About Rob Kendal</h3>
                 <p className="author-description">
                     Rob Kendal is an award-winning front-end developer and marketer who likes simple, organised thinking and making clever things.
-                     You can find him working at <a href="https://www.iamcloud.com" rel="noopener noreferrer" target="_blank">IAM Cloud</a>. Say hi on me@robkendal.co.uk.
+                     You can find him working on some things on <a href="https://github.com/bpk68" title="rob kendal's github profile">GitHub</a> and recording podcasts,
+                     such as <a href="https://thefrontendpodcast.site" title="the front end podcast website">The Front End</a>. Say hi on me@robkendal.co.uk.
                 </p>
             </div>
         </div>

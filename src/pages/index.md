@@ -10,5 +10,5 @@ intro:
   heading: What is a Rob?
   description: >
     Rob is an experienced UI developer and marketer who likes simple, organised thinking and making clever things happen in progressive web apps. 
-    I like JavaScript (a lot!), React (amongst other frameworks), and solving problems. You can find me working at <a href="https://www.iamcloud.com">IAM Cloud</a>. Drop by and say hi on me[at]robkendal.co.uk.
+    I like JavaScript (a lot!), React (amongst other frameworks), and solving problems. You can find me working on things at <a href="https://github.com/bpk68" title="rob kendal's github profile">GitHub</a>. Say hi on me[at]robkendal.co.uk.
 ---

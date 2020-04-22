@@ -18,6 +18,6 @@ That was it for me, the defining moment where I knew I wanted to develop all the
 
 More recently, I co-founded a creative marketing agency and managed HubSpot campaigns for some local business heroes as well as some bigger players, such as North Yorkshire County Council. We even won some awards for our work!
 
-Right now, I'm very excited to be working for an amazing Yorkshire company, [IAM Cloud](https://www.iamcloud.com), as a **senior UI/front end developer**. I enjoy blogging, presenting at events (and sharing as much knowledge as I can), and learning something new every day.
+Right now, I'm very excited to be working on a range of projects involving React and Node JS. I enjoy blogging, presenting at events (and sharing as much knowledge as I can), and learning something new every day.
 
 I also run a web development podcast called [The Front End](https://thefrontendpodcast.site) which is available on [Anchor podcasts](https://anchor.fm/the-front-end).
