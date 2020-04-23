@@ -1,6 +1,6 @@
 import React from 'react';
 import { navigate } from 'gatsby-link';
-
+import Helmet from 'react-helmet';
 import Layout from '../../components/Layout'
 import PodcastSnippet from '../../components/PodcastSnippet';
 
@@ -16,6 +16,16 @@ export default class FrontEndPodcastPage extends React.Component {
     render() {
         return (
             <Layout>
+                <Helmet titleTemplate="%s | Kendal Mint Code">
+                    <title>The Front End | A podcast for front end developers on Apple Podcasts and Google Play</title>
+                    <meta
+                        name="description"
+                        content="
+                            The Front End Podcast explores life as a front end developer. We look at topics on recruitment, getting into development,
+                            tools and frameworks. JavaScript, React, CSS and more.
+                        "
+                    />
+                </Helmet>
                 <section
                     className="hero is-primary is-medium has-text-dark"
                     style={{
