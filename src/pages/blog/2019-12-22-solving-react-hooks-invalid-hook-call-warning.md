@@ -17,7 +17,7 @@ tags:
 ---
 ![Blog header for article on invalid hook call warning](/img/fixing-invalid-hooks-warning-blog-header.png)
 
-Recently, we decided to build our own [React-based query builder](https://github.com/IAM-Cloud-Solutions/iamc-query-builder) as none of the existing ones out in the wild were doing what we wanted. Awesome: who doesn't love the chance to get their chops around a meaty sort-of-side-project, especially when we'd planned to release it to the open source community?!
+Recently, I decided to build a [React-based visual query builder](https://github.com/bpk68/react-visual-query-builder) as none of the existing ones out in the wild were doing what I wanted. Awesome: who doesn't love the chance to get their chops around a meaty sort-of-side-project, especially when we'd planned to release it to the open source community?!
 
 The project went surprisingly well, smoothly even and the React query builder came together quickly and worked great. We had it all, lots of documentation, we were using Hooks (a new adventure for me) and it was well tested.
 
@@ -128,7 +128,8 @@ So that should see you right. It's worth noting that your consuming project will
 Here's a quick summary of the helpful links used throughout this article:
 
 * [Official React hooks error documentation](https://reactjs.org/warnings/invalid-hook-call-warning.html)
-* [The React Query Builder on GitHub](https://github.com/IAM-Cloud-Solutions/iamc-query-builder)
+* [The React Query Builder on GitHub](https://github.com/bpk68/react-visual-query-builder)
+* [The React Visual Query Builder on NPM](https://www.npmjs.com/package/react-visual-query-builder)
 * [The Hooks error discussion on GitHub](https://github.com/facebook/react/issues/13991)
 * [My Webpack starter project](https://github.com/bpk68/web-template)
 * [My Parcel JS starter project with React](https://github.com/bpk68/parcel-starter-with-react)

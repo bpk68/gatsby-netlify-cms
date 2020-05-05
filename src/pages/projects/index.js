@@ -121,7 +121,7 @@ export default class FrontEndPodcastPage extends React.Component {
 
                             <article className="blog-post media">
                                 <figure className="media-left" style={{ width: '240px' }}>
-                                    <a href="https://github.com/bpk68/react-query-builder" className="post-thumbnail">
+                                    <a href="https://github.com/bpk68/react-visual-query-builder" className="post-thumbnail">
                                         <PreviewCompatibleImage
                                             imageInfo={{
                                                 image: require('../../../static/img/react-logo.png'),
@@ -133,11 +133,11 @@ export default class FrontEndPodcastPage extends React.Component {
                                 <div className="media-content">
                                     <div className="post-meta">
                                         <p className="subtitle is-size-6 is-block is-uppercase has-text-grey-light">
-                                            react-query-builder
+                                            react-visual-query-builder
                                         </p>
                                         <h2 className="post-title title is-size-4">
-                                            <a href="https://github.com/bpk68/react-query-builder" title="">
-                                                React Query Builder
+                                            <a href="https://github.com/bpk68/react-visual-query-builder" title="">
+                                                React Visual Query Builder
                                             </a>
                                         </h2>
                                     </div>
@@ -147,7 +147,7 @@ export default class FrontEndPodcastPage extends React.Component {
                                             rule-groups and a number of field components depending on desired input type.
                                         </p>
                                         <p>
-                                            <a href="https://github.com/bpk68/react-query-builder">Find out more</a>
+                                            <a href="https://github.com/bpk68/react-visual-query-builder">Find out more</a>
                                         </p>
                                     </div>
                                 </div>
