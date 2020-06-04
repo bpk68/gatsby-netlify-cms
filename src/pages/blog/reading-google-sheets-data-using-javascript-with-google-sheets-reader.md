@@ -31,13 +31,12 @@ Because I couldn't find something that worked well for my needs (and I didn't wa
 
 The **Google Sheets Reader** is available on GitHub and the NPM package repository here:
 
-*   [GitHub project](https://github.com/bpk68/g-sheets-api.git#readme)
-*   [NPM package](https://www.npmjs.com/package/g-sheets-api)
+- [GitHub project](https://github.com/bpk68/g-sheets-api.git#readme)
+- [NPM package](https://www.npmjs.com/package/g-sheets-api)
 
 We'll go into the why's and wherefore's in a moment, but let's cut to the chase and explain how to use it first.
 
-How do I use it?
-----------------
+## How do I use it?
 
 Glad you asked. Head on over to the [GitHub repo and take a look for yourself](https://github.com/bpk68/g-sheets-api.git#readme). I've put together a decent readme file detailing exactly how to consume and use the Google Sheets Reader for yourself in your own projects.
 
@@ -45,11 +44,13 @@ Glad you asked. Head on over to the [GitHub repo and take a look for yourself](h
 
 The Google Sheets Reader is a simple, one-way data fetcher that allows for _reading only_ from a publicly published Google Sheet. If your needs look like these, then it might be a great fit:
 
-*   You are able to publish your Google Sheet publicly
-*   You have a relatively simple data set in a single sheet (multiple sheets is a planned feature)
-*   You only need to _read_ the data
-*   You don't need access to more advanced functionality (such as caching or OAuth) provided by the [official Google Sheets API](https://developers.google.com/sheets/api/).
-*   You want a simple, straightforward means to get data > do things with data > celebrate!
+- You are able to publish your Google Sheet publicly
+- You have a relatively simple data set in a single sheet (multiple sheets is a planned feature)
+- You only need to _read_ the data
+- You don't need access to more advanced functionality (such as caching or OAuth) provided by the [official Google Sheets API](https://developers.google.com/sheets/api/).
+- You want a simple, straightforward means to get data > do things with data > celebrate!
+
+[![twitter banner call to action](/img/twitter_cta.png)](http://twitter.com/kendalmintcode)
 
 ### Enough chatter, let me use the Google Sheets Reader!
 
@@ -70,17 +71,17 @@ or, if you prefer Yarn,
 Next, you need to call the reader in your project:
 
 ```javascript
-const reader = require('g-sheets-api');
+const reader = require("g-sheets-api");
 const readerOptions = {
-	sheetId: '1-CmQumuz5ZiOvINhphEMgfplrJacQhD623RROcOBTAg',
-	returnAllResults: false,
-	filter: {
-		"key to filter on": "value to match" 
-	}
+  sheetId: "1-CmQumuz5ZiOvINhphEMgfplrJacQhD623RROcOBTAg",
+  returnAllResults: false,
+  filter: {
+    "key to filter on": "value to match",
+  },
 };
 
-reader(readerOptions, results => {
-	/* Do something amazing with the results */
+reader(readerOptions, (results) => {
+  /* Do something amazing with the results */
 });
 ```
 
@@ -90,24 +91,25 @@ What the reader does for you is fetch this data swamp, trims and neatens it befo
 
 ```json
 [
-	{ // row 1
-		"column 1 header": "column 1, row 1 value",
-		"column 2 header": "column 2, row 1 value",
-		"column 3 header": "column 3, row 1 value",
-	},
-	{ // row 2
-		"column 1 header": "column 1, row 2 value",
-		"column 2 header": "column 2, row 2 value",
-		"column 3 header": "column 3, row 2 value",
-	},
-	// etc.
+  {
+    // row 1
+    "column 1 header": "column 1, row 1 value",
+    "column 2 header": "column 2, row 1 value",
+    "column 3 header": "column 3, row 1 value"
+  },
+  {
+    // row 2
+    "column 1 header": "column 1, row 2 value",
+    "column 2 header": "column 2, row 2 value",
+    "column 3 header": "column 3, row 2 value"
+  }
+  // etc.
 ]
 ```
 
 That way, you're free to deal with them however you wish!
 
-Why build a Google Sheets Reader?
----------------------------------
+## Why build a Google Sheets Reader?
 
 During a recent project involving the need to read structured, tabular data from an online storage pot (of some nature), we had initially used Google's Fusion Tables. However, these are a beta product and are being closed down this year year (August 2019 ish at the time of writing).
 
@@ -133,11 +135,10 @@ I then built the simple library to fetch data using this URL because, as mention
 
 So, when you want to read data from Google Sheets using JavaScript in a simple, fuss-free way, now you can :D
 
-Useful links
-------------
+## Useful links
 
 If you'd like to know more about the utility or explore the code, then please take a look; feel free to leave comments, fork the work, suggest improvements - I'm all ears.
 
-*   [GitHub project](https://github.com/bpk68/g-sheets-api.git#readme)
-*   [NPM package](https://www.npmjs.com/package/g-sheets-api)
-*   [Google Sheets official API](https://developers.google.com/sheets/api/)
+- [GitHub project](https://github.com/bpk68/g-sheets-api.git#readme)
+- [NPM package](https://www.npmjs.com/package/g-sheets-api)
+- [Google Sheets official API](https://developers.google.com/sheets/api/)

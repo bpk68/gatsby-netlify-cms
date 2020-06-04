@@ -15,6 +15,7 @@ tags:
   - React
   - Debugging
 ---
+
 ![Blog header for article on invalid hook call warning](/img/fixing-invalid-hooks-warning-blog-header.png)
 
 Recently, I decided to build a [React-based visual query builder](https://github.com/bpk68/react-visual-query-builder) as none of the existing ones out in the wild were doing what I wanted. Awesome: who doesn't love the chance to get their chops around a meaty sort-of-side-project, especially when we'd planned to release it to the open source community?!
@@ -39,17 +40,17 @@ _There are three common reasons you might be seeing it:_
 2. _You might be breaking the Rules of Hooks._
 3. _You might have more than one copy of React in the same app._
 
-I definitely wasn't falling foul of causes two or three, and I thought I had number one covered, but this required a little more digging. 
+I definitely wasn't falling foul of causes two or three, and I thought I had number one covered, but this required a little more digging.
 
 Hugely frustrating times ensued. Monitors were thrown out of the window and I started to question my entire development life.
 
 ### Finally finding the answer
 
-After much searching and debugging, the problem seemed to definitely lay with this duplicate versions of React or React DOM issue. 
+After much searching and debugging, the problem seemed to definitely lay with this duplicate versions of React or React DOM issue.
 
 In fact, the answer lay at the end of the helpful React Hooks documentation above. There was a link to an extended [GitHub discussion on the pesky invalid hook call warning error](https://github.com/facebook/react/issues/13991) and plenty of fellow devs with the exact same woes. More importantly, it had lots of different possible solutions to different situations.
 
-For my particular scenario, I'd used my very own [Parcel JS starter project (complete with React)](https://robkendal.co.uk/blog/2019-04-29-using-parcel-bundler-with-react-js/) to build the query builder. I did take note of the 'multiple versions of React' no no from the above list and had used [Parcel's alias feature](https://parceljs.org/module_resolution.html#aliases), as well as making sure to employ the `peerDependencies` config setting in package.json. 
+For my particular scenario, I'd used my very own [Parcel JS starter project (complete with React)](https://robkendal.co.uk/blog/2019-04-29-using-parcel-bundler-with-react-js/) to build the query builder. I did take note of the 'multiple versions of React' no no from the above list and had used [Parcel's alias feature](https://parceljs.org/module_resolution.html#aliases), as well as making sure to employ the `peerDependencies` config setting in package.json.
 
 ```
 "peerDependencies": {
@@ -64,9 +65,9 @@ So then, we've found the answer, but how do we solve this issue and make sure th
 
 ## How to fix the invalid hook call warning
 
-In a normal setup, you'll have a dependency pushed to some hosting repository, such as NPM, and you'll consume that in some other project that you're working on using the `npm install my-cool-widget` command. 
+In a normal setup, you'll have a dependency pushed to some hosting repository, such as NPM, and you'll consume that in some other project that you're working on using the `npm install my-cool-widget` command.
 
-This diagram illustrates the typical setup. 
+This diagram illustrates the typical setup.
 
 ![typical npm dependency diagram illustrating how the consuming project depends on a dependency project](/img/dependency-hooks-example.png)
 
@@ -74,13 +75,15 @@ The problem here, is that, despite all the precautions above, our 'Shiny new thi
 
 Thus, unknowingly, I'd violated the first law of Hooks: **thou shalt not have multiple versions of React in the same project.**
 
-The solution? Stop using Parcel and switch to Webpack (don't worry, I've got a [great Webpack starter project](https://github.com/bpk68/web-template) too, with all the initial nuts and bolts you'll need preconfigured). 
+The solution? Stop using Parcel and switch to Webpack (don't worry, I've got a [great Webpack starter project](https://github.com/bpk68/web-template) too, with all the initial nuts and bolts you'll need preconfigured).
 
 (At the time of writing, I'm not convinced that there is a way to use Parcel JS with React in such a way as to create a consumable dependency to push to NPM — prove me wrong comments section!).
 
+[![twitter banner call to action](/img/twitter_cta.png)](http://twitter.com/kendalmintcode)
+
 ## Fix the invalid hook call warning using Webpack
 
-It's probably less likely that you'll have a Parcel JS specific problem here, but either way, you'll probably find that **your mysterious React invalid hooks error is caused by duplicate React versions**. And, since Webpack is arguably the most popular JS bundler out there, there _is_ a good chance you'll be using that to bundle and package your lovely dependency. 
+It's probably less likely that you'll have a Parcel JS specific problem here, but either way, you'll probably find that **your mysterious React invalid hooks error is caused by duplicate React versions**. And, since Webpack is arguably the most popular JS bundler out there, there _is_ a good chance you'll be using that to bundle and package your lovely dependency.
 
 In order to dodge the invalid Hooks error caused by duplicate React version, using Webpack, we'll need to do a few things in the dependency project (i.e. the widget you're building):
 
@@ -127,9 +130,9 @@ So that should see you right. It's worth noting that your consuming project will
 
 Here's a quick summary of the helpful links used throughout this article:
 
-* [Official React hooks error documentation](https://reactjs.org/warnings/invalid-hook-call-warning.html)
-* [The React Query Builder on GitHub](https://github.com/bpk68/react-visual-query-builder)
-* [The React Visual Query Builder on NPM](https://www.npmjs.com/package/react-visual-query-builder)
-* [The Hooks error discussion on GitHub](https://github.com/facebook/react/issues/13991)
-* [My Webpack starter project](https://github.com/bpk68/web-template)
-* [My Parcel JS starter project with React](https://github.com/bpk68/parcel-starter-with-react)
+- [Official React hooks error documentation](https://reactjs.org/warnings/invalid-hook-call-warning.html)
+- [The React Query Builder on GitHub](https://github.com/bpk68/react-visual-query-builder)
+- [The React Visual Query Builder on NPM](https://www.npmjs.com/package/react-visual-query-builder)
+- [The Hooks error discussion on GitHub](https://github.com/facebook/react/issues/13991)
+- [My Webpack starter project](https://github.com/bpk68/web-template)
+- [My Parcel JS starter project with React](https://github.com/bpk68/parcel-starter-with-react)

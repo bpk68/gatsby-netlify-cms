@@ -31,14 +31,13 @@ But enough preamble, let's do this thing! Strap in, it's gonna be a long one!!
 
 Node JS logo
 
-1\. Node API server setup
--------------------------
+## 1\. Node API server setup
 
 First things first, you'll need to make sure you have Node.js installed on your machine and preferably an up to date version of NPM.
 
 OK? Good. So, let's create a new folder and navigate into it:
 
-```mkdir ~/some/file/path/api-server\n```
+`mkdir ~/some/file/path/api-server\n`
 
 Drop into the folder and run NPM's `init` script to set up the project with some default files, such as `package.json`.
 
@@ -49,12 +48,12 @@ npm init
 
 Now, we need to install a few things to get going, namely:
 
-*   **Express** \> `npm install express`  
-    _[Express](https://expressjs.com/) is a web application framework that provides lots of awesome features and HTTP utility methods_
-*   **Body Parser** > `npm install body-parser`  
-    _[body-parser](https://www.npmjs.com/package/body-parser) is a body parsing middleware that helps to process the body of requests sent to the express server_
-*   **Nodemon** (optional) > `npm install nodemon --save-dev`  
-    completely optional, but [Nodemon](https://nodemon.io/) is super helpful because it acts as a file-watcher, reloading our server when we make changes to our files – handy!
+- **Express** \> `npm install express`  
+  _[Express](https://expressjs.com/) is a web application framework that provides lots of awesome features and HTTP utility methods_
+- **Body Parser** > `npm install body-parser`  
+  _[body-parser](https://www.npmjs.com/package/body-parser) is a body parsing middleware that helps to process the body of requests sent to the express server_
+- **Nodemon** (optional) > `npm install nodemon --save-dev`  
+  completely optional, but [Nodemon](https://nodemon.io/) is super helpful because it acts as a file-watcher, reloading our server when we make changes to our files – handy!
 
 Add a couple of folders and files so that your project structure looks something like this:
 
@@ -80,7 +79,7 @@ Open up your `package.json` file and check that the `main` entry is set to our `
 
 Setup's almost done, the last thing is to make sure that we've installed the packages and their dependencies so they're ready to rock. Run the following command:
 
-```npm install```
+`npm install`
 
 Bosh - setup's all done and we're ready to start building the server.
 
@@ -88,8 +87,7 @@ Bosh - setup's all done and we're ready to start building the server.
 
 Photo by [Nicole Baster](https://unsplash.com/@nicolebaster?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit) / [Unsplash](https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit)
 
-2\. Building the server.js file
--------------------------------
+## 2\. Building the server.js file
 
 Our first file, an entry point of sorts, will be `server.js`. We'll build up the main body of the API-serving logic here. We'll deal with our routes and route handling later on.
 
@@ -97,27 +95,27 @@ Open up `server.js` and add in the following code:
 
 ```javascript
 // load up the express framework and body-parser helper
-const express = require('express');
-const bodyParser = require('body-parser');
+const express = require("express");
+const bodyParser = require("body-parser");
 
 // create an instance of express to serve our end points
 const app = express();
 
 // we'll load up node's built in file system helper library here
 // (we'll be using this later to serve our JSON files
-const fs = require('fs');
+const fs = require("fs");
 
-// configure our express instance with some body-parser settings 
+// configure our express instance with some body-parser settings
 // including handling JSON data
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // this is where we'll handle our various routes from
-const routes = require('./routes/routes.js')(app, fs);
+const routes = require("./routes/routes.js")(app, fs);
 
 // finally, launch our server on port 3001.
 const server = app.listen(3001, () => {
-    console.log('listening on port %s...', server.address().port);
+  console.log("listening on port %s...", server.address().port);
 });
 ```
 
@@ -126,34 +124,33 @@ There's a lot going on in there for a relatively small file. To unpack it a litt
 The next part is loading our routing file:
 
 ```javascript
-const routes = require('./routes/routes.js')(app,fs);
+const routes = require("./routes/routes.js")(app, fs);
 ```
 
 This achieves a couple of things:
 
-*   Loads in our main route-handling starter point `routes.js`
-*   Passes our instance of express, `app` and the Node file system library, `fs` into the routes. We'll need both of these to a) attach our route-handling to our running server instance, and b) access our JSON files using Node's file system helpers
+- Loads in our main route-handling starter point `routes.js`
+- Passes our instance of express, `app` and the Node file system library, `fs` into the routes. We'll need both of these to a) attach our route-handling to our running server instance, and b) access our JSON files using Node's file system helpers
 
 Now, we can't quite run our server. Since there's nothing defined in our routing file, it's very likely you'll get a `TypeError: require(...) is not a function` error. Not very helpful, but all will be resolved once we add some routes.
 
-3\. Building the route handling system
---------------------------------------
+[![twitter banner call to action](/img/twitter_cta.png)](http://twitter.com/kendalmintcode)
+
+## 3\. Building the route handling system
 
 So far, so good, but what good is an API server with no routes?! None, that's what. Let's remedy that and build out some route handling!
 
 Open up `/routes/routes.js` and enter the empty module code as follows:
 
 ```javascript
-const appRouter = (app, fs) => {
-
-};
+const appRouter = (app, fs) => {};
 
 module.exports = appRouter;
 ```
 
 Save the file and let's give this puppy a whirl. Enter this command in your terminal:
 
-```npm start```
+`npm start`
 
 You should see a glorious 'listening on port 3001' message. Splendid :)
 
@@ -171,24 +168,24 @@ First, we need to add in some JSON data. Navigate to the `/data` folder and crea
 
 ```json
 {
-    "1": {
-        "name": "king arthur",
-        "password": "password1",
-        "profession": "king",
-        "id": 1
-    },
-    "2": {
-        "name": "rob kendal",
-        "password": "password3",
-        "profession": "code fiddler",
-        "id": 2
-    },
-    "3": {
-        "name": "teresa may",
-        "password": "password2",
-        "profession": "brexit destroyer",
-        "id": 6
-    }
+  "1": {
+    "name": "king arthur",
+    "password": "password1",
+    "profession": "king",
+    "id": 1
+  },
+  "2": {
+    "name": "rob kendal",
+    "password": "password3",
+    "profession": "code fiddler",
+    "id": 2
+  },
+  "3": {
+    "name": "teresa may",
+    "password": "password2",
+    "profession": "brexit destroyer",
+    "id": 6
+  }
 }
 ```
 
@@ -196,20 +193,19 @@ Next, create a new file under `/routes` called `users.js` and fill it with the f
 
 ```javascript
 const userRoutes = (app, fs) => {
+  // variables
+  const dataPath = "./data/users.json";
 
-    // variables
-    const dataPath = './data/users.json';
+  // READ
+  app.get("/users", (req, res) => {
+    fs.readFile(dataPath, "utf8", (err, data) => {
+      if (err) {
+        throw err;
+      }
 
-    // READ
-    app.get('/users', (req, res) => {
-        fs.readFile(dataPath, 'utf8', (err, data) => {
-            if (err) {
-                throw err;
-            }
-
-            res.send(JSON.parse(data));
-        });
+      res.send(JSON.parse(data));
     });
+  });
 };
 
 module.exports = userRoutes;
@@ -228,33 +224,30 @@ Although complete, our first route won't do anything unless the main routing fil
 
 ```javascript
 // load up our shiny new route for users
-const userRoutes = require('./users');
+const userRoutes = require("./users");
 
 const appRouter = (app, fs) => {
+  // we've added in a default route here that handles empty routes
+  // at the base API url
+  app.get("/", (req, res) => {
+    res.send("welcome to the development api-server");
+  });
 
-    // we've added in a default route here that handles empty routes
-    // at the base API url
-    app.get('/', (req, res) => {
-        res.send('welcome to the development api-server');
-    });
-
-
-    // run our user route module here to complete the wire up
-    userRoutes(app, fs);
+  // run our user route module here to complete the wire up
+  userRoutes(app, fs);
 };
 
 // this line is unchanged
 module.exports = appRouter;
 ```
 
-4\. Testing our server
-----------------------
+## 4\. Testing our server
 
 So, we've setup our project, created a simple Node API server, added some data in JSON files to be served by the API, and created a route handler to serve API requests.
 
 Let's test our hard work out. Run the same command as before to start the server:
 
-```npm start```
+`npm start`
 
 Once it's loading, you can visit `http://localhost:3001/users` in a browser, where you should be greeted by a list of users as defined in the JSON file.
 
@@ -272,8 +265,7 @@ Here's what our GET request looks like using Postman:
 
 /users GET request when using Postman desktop app
 
-4a. Skip to the complete example
---------------------------------
+## 4a. Skip to the complete example
 
 GET-ting results and listing them is fine, but in the real-world we usually need to complete the rest of the RESTful CRUD cycle, namely creating (POST), updating (PUT), and deleting (DELETE).
 
@@ -281,8 +273,7 @@ Before we get to the more complex examples, you can skip ahead and [download the
 
 [Checkout the complete Node API server with JSON file data on GitHub here](https://github.com/bpk68/api-server-starter).
 
-5\. Taking it further, completing the CRUD
-------------------------------------------
+## 5\. Taking it further, completing the CRUD
 
 Let's keep going while we're on a roll. In this section, we'll pad out our limited API server with some creating, updating and deleting methods to alter the JSON files stored on disk.
 
@@ -291,44 +282,50 @@ Let's keep going while we're on a roll. In this section, we'll pad out our limit
 As a huge fan of the [continuous refactoring technique](/continuous-refactoring-avoiding-technical-debt-in-the-here-and-now/), I'm always looking to improve code as I go. Looking at the file `users.js` now, we're going to start repeating a lot of code with the `fs.readFile()` and `fs.writeFile()` methods. Let's refactor them up to the top of the `users.js` file now:
 
 ```javascript
-
 const userRoutes = (app, fs) => {
+  //...unchanged ^^^
 
-    //...unchanged ^^^
+  // refactored helper methods
+  const readFile = (
+    callback,
+    returnJson = false,
+    filePath = dataPath,
+    encoding = "utf8"
+  ) => {
+    fs.readFile(filePath, encoding, (err, data) => {
+      if (err) {
+        throw err;
+      }
 
-    
-    // refactored helper methods
-    const readFile = (callback, returnJson = false, filePath = dataPath, encoding = 'utf8') => {
-        fs.readFile(filePath, encoding, (err, data) => {
-            if (err) {
-                throw err;
-            }
-
-            callback(returnJson ? JSON.parse(data) : data);
-        });
-    };
-
-   const writeFile = (fileData, callback, filePath = dataPath, encoding = 'utf8') => {
-
-        fs.writeFile(filePath, fileData, encoding, (err) => {
-            if (err) {
-                throw err;
-            }
-
-            callback();
-        });
-    };
-
-    // READ
-    app.get('/users', (req, res) => {
-        fs.readFile(dataPath, 'utf8', (err, data) => {
-            if (err) {
-                throw err;
-            }
-
-            res.send(JSON.parse(data));
-        });
+      callback(returnJson ? JSON.parse(data) : data);
     });
+  };
+
+  const writeFile = (
+    fileData,
+    callback,
+    filePath = dataPath,
+    encoding = "utf8"
+  ) => {
+    fs.writeFile(filePath, fileData, encoding, (err) => {
+      if (err) {
+        throw err;
+      }
+
+      callback();
+    });
+  };
+
+  // READ
+  app.get("/users", (req, res) => {
+    fs.readFile(dataPath, "utf8", (err, data) => {
+      if (err) {
+        throw err;
+      }
+
+      res.send(JSON.parse(data));
+    });
+  });
 };
 
 module.exports = userRoutes;
@@ -342,9 +339,9 @@ So it makes sense to pull out the future redundant reading and writing to file o
 
 Our new, refactored read/write methods look very similar. Here's what they do:
 
-*   Both accept a callback argument that fires once the read/write operation is complete
-*   They set some default, common variables (such as setting the path of the file to the default data file – in this case, `users.json`)
-*   Internally, they catch and throw an error, or call the callback function once complete
+- Both accept a callback argument that fires once the read/write operation is complete
+- They set some default, common variables (such as setting the path of the file to the default data file – in this case, `users.json`)
+- Internally, they catch and throw an error, or call the callback function once complete
 
 You can [read more about the various file system methods on the Node website](https://nodejs.org/api/fs.html).
 
@@ -356,21 +353,19 @@ We'll start with the create part of the CRUD, creating a new user. Add in the fo
 // ...
 
 // CREATE
-    app.post('/users', (req, res) => {
+app.post("/users", (req, res) => {
+  readFile((data) => {
+    const newUserId = Object.keys(data).length + 1;
 
-        readFile(data => {
-            const newUserId = Object.keys(data).length + 1;
+    // add the new user
+    data[newUserId] = JSON.parse(req.body.data);
 
-            // add the new user
-            data[newUserId] = JSON.parse(req.body.data);
-
-            writeFile(JSON.stringify(data, null, 2), () => {
-                res.status(200).send('new user added');
-            });
-        },
-            true);
+    writeFile(JSON.stringify(data, null, 2), () => {
+      res.status(200).send("new user added");
     });
-    
+  }, true);
+});
+
 // ...rest of file
 ```
 
@@ -392,27 +387,24 @@ Here's our update function:
 
 ```javascript
 // UPDATE
-app.put('/users/:id', (req, res) => {
+app.put("/users/:id", (req, res) => {
+  readFile((data) => {
+    // add the new user
+    const userId = req.params["id"];
+    data[userId] = JSON.parse(req.body.data);
 
-    readFile(data => {
-
-        // add the new user
-        const userId = req.params["id"];
-        data[userId] = JSON.parse(req.body.data);
-
-        writeFile(JSON.stringify(data, null, 2), () => {
-            res.status(200).send(`users id:${userId} updated`);
-        });
-    },
-        true);
+    writeFile(JSON.stringify(data, null, 2), () => {
+      res.status(200).send(`users id:${userId} updated`);
+    });
+  }, true);
 });
 ```
 
 The main differences here are the route we call and grabbing the parameters out of the request.
 
-*   The route has changed from `/users` to `/users/:id`. The `:id` portion is a variable parameter that we can append to our API URL. So, you could call `/users/4` which would match against this route if you used a PUT request – the accepted RESTful way of handling updates
-*   We grab this `:id` value to help us find the correct user to edit using `req.params[id]`
-*   Then we update the matching user from our users list by grabbing a JSON version of our request body – `JSON.parse(req.body.data)`
+- The route has changed from `/users` to `/users/:id`. The `:id` portion is a variable parameter that we can append to our API URL. So, you could call `/users/4` which would match against this route if you used a PUT request – the accepted RESTful way of handling updates
+- We grab this `:id` value to help us find the correct user to edit using `req.params[id]`
+- Then we update the matching user from our users list by grabbing a JSON version of our request body – `JSON.parse(req.body.data)`
 
 **Note,** we're not adding the extra complexity of validating the incoming data here. This is a **necessary part of production API development**, but for simplicities sake, we're trusting you to send the right data into the API request!
 
@@ -420,19 +412,16 @@ To round things off, here is our delete function:
 
 ```javascript
 // DELETE
-app.delete('/users/:id', (req, res) => {
+app.delete("/users/:id", (req, res) => {
+  readFile((data) => {
+    // add the new user
+    const userId = req.params["id"];
+    delete data[userId];
 
-    readFile(data => {
-
-        // add the new user
-        const userId = req.params["id"];
-        delete data[userId];
-
-        writeFile(JSON.stringify(data, null, 2), () => {
-            res.status(200).send(`users id:${userId} removed`);
-        });
-    },
-        true);
+    writeFile(JSON.stringify(data, null, 2), () => {
+      res.status(200).send(`users id:${userId} removed`);
+    });
+  }, true);
 });
 ```
 
